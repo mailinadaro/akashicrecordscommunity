@@ -1,0 +1,270 @@
+/**
+ * Jujuy Adentro — Design Tokens
+ * Version: 1.0.0
+ *
+ * Architecture:
+ * Primitive tokens → Semantic tokens
+ *
+ * Components must consume semantic tokens whenever possible.
+ */
+
+:root {
+  /* ==========================================================
+     01. COLOR — PRIMITIVES
+     ========================================================== */
+
+  /* Warm neutrals */
+  --color-warm-50: #f5f0e7;
+  --color-warm-100: #ede0ce;
+  --color-warm-200: #e4d9c8;
+
+  /* Text / earth */
+  --color-earth-950: #171512;
+  --color-earth-900: #292621;
+  --color-earth-800: #38332b;
+  --color-earth-700: #4a382d;
+
+  /* Accent */
+  --color-ochre-500: #b68a4a;
+
+
+  /* ==========================================================
+     02. COLOR — BRAND COMMUNICATION
+     Reserved for PDFs, Instagram, email and other
+     brand communication materials.
+     Do not freely introduce these into the website UI.
+     ========================================================== */
+
+  --color-brand-earth: #4a382d;
+  --color-brand-terracotta: #7b4a34;
+  --color-brand-rose: #a8664f;
+  --color-brand-ochre: #b68a4a;
+  --color-brand-stone: #c8b69a;
+  --color-brand-warm-terracotta: #c2643d;
+
+
+  /* ==========================================================
+     03. COLOR — STATES / SYSTEM
+     ========================================================== */
+
+  --color-error: #a33a32;
+  --color-success: #4f6948;
+
+
+  /* ==========================================================
+     04. COLOR — SEMANTIC
+     Components should use these tokens instead of primitives.
+     ========================================================== */
+
+  /* Surfaces */
+  --color-surface-page: var(--color-warm-50);
+  --color-surface-secondary: var(--color-warm-100);
+  --color-surface-tertiary: var(--color-warm-200);
+
+  /* Text */
+  --color-text-primary: var(--color-earth-900);
+  --color-text-secondary: var(--color-earth-700);
+
+  /* Actions */
+  --color-surface-action: var(--color-earth-700);
+  --color-surface-action-hover: var(--color-ochre-500);
+  --color-text-on-action: var(--color-warm-50);
+
+  /* Borders */
+  --color-border-default: var(--color-warm-200);
+  --color-border-focus: var(--color-ochre-500);
+
+  /* Icons */
+  --color-icon-primary: var(--color-earth-700);
+
+  /* States */
+  --color-state-error: var(--color-error);
+  --color-state-success: var(--color-success);
+
+
+  /* ==========================================================
+     05. TYPOGRAPHY — FAMILIES
+     ========================================================== */
+
+  --font-display: "Lora", Georgia, serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
+  --font-mono: var(--font-body);
+
+
+  /* ==========================================================
+     06. TYPOGRAPHY — WEIGHTS
+     ========================================================== */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+
+  /* ==========================================================
+     07. TYPOGRAPHY — SIZE
+     Based on 4px increments.
+     ========================================================== */
+
+  --font-size-display-xl: 80px;
+  --font-size-display-lg: 64px;
+  --font-size-display-md: 48px;
+  --font-size-display-sm: 32px;
+
+  --font-size-body-lg: 20px;
+  --font-size-body-md: 16px;
+  --font-size-body-sm: 14px;
+  --font-size-label: 12px;
+
+
+  /* ==========================================================
+     08. TYPOGRAPHY — LINE HEIGHT
+     ========================================================== */
+
+  --line-height-display-xl: 88px;
+  --line-height-display-lg: 72px;
+  --line-height-display-md: 56px;
+  --line-height-display-sm: 40px;
+
+  --line-height-body-lg: 32px;
+  --line-height-body-md: 24px;
+  --line-height-body-sm: 20px;
+  --line-height-label: 16px;
+
+
+  /* ==========================================================
+     09. LETTER SPACING
+     ========================================================== */
+
+  --tracking-display: -0.02em;
+  --tracking-body: 0;
+  --tracking-label: 0.02em;
+
+
+  /* ==========================================================
+     10. SPACING
+     Base: 4px
+     ========================================================== */
+
+  --space-100: 4px;
+  --space-200: 8px;
+  --space-300: 12px;
+  --space-400: 16px;
+  --space-500: 24px;
+  --space-600: 32px;
+  --space-800: 48px;
+  --space-1000: 64px;
+  --space-1200: 96px;
+  --space-1500: 120px;
+  --space-2000: 160px;
+
+
+  /* ==========================================================
+     11. LAYOUT
+     ========================================================== */
+
+  --container-max: 1280px;
+  --container-editorial: 1120px;
+  --container-reading: 680px;
+
+  --gutter-desktop: 40px;
+  --gutter-tablet: 32px;
+  --gutter-mobile: 20px;
+
+  --grid-desktop: 12;
+  --grid-tablet: 8;
+  --grid-mobile: 4;
+
+
+  /* ==========================================================
+     12. BORDER
+     ========================================================== */
+
+  --border-width-none: 0px;
+  --border-width-default: 1px;
+  --border-width-focus: 2px;
+
+
+  /* ==========================================================
+     13. RADIUS
+     ========================================================== */
+
+  --radius-none: 0px;
+  --radius-small: 4px;
+  --radius-pill: 9999px;
+
+
+  /* ==========================================================
+     14. MOTION
+     ========================================================== */
+
+  --motion-fast: 200ms;
+  --motion-standard: 400ms;
+  --motion-editorial: 1000ms;
+  --motion-slow: 1400ms;
+  --motion-cinematic: 2000ms;
+
+  --motion-ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --parallax-subtle: 4%;
+  --parallax-maximum: 8%;
+
+
+  /* ==========================================================
+     15. COMPONENT TOKENS
+     These are semantic extensions, not new visual primitives.
+     ========================================================== */
+
+  /* Buttons */
+  --button-height-sm: 40px;
+  --button-height-md: 48px;
+  --button-height-lg: 56px;
+
+  --button-padding-x-sm: var(--space-400);
+  --button-padding-x-md: var(--space-500);
+  --button-padding-x-lg: var(--space-600);
+
+  /* Inputs */
+  --input-height: 48px;
+  --input-padding-x: var(--space-400);
+
+  /* Focus */
+  --focus-width: 2px;
+  --focus-offset: 4px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE TYPOGRAPHY
+   ========================================================== */
+
+@media (max-width: 767px) {
+  :root {
+    --font-size-display-xl: 48px;
+    --font-size-display-lg: 40px;
+    --font-size-display-md: 36px;
+    --font-size-display-sm: 28px;
+
+    --line-height-display-xl: 56px;
+    --line-height-display-lg: 48px;
+    --line-height-display-md: 44px;
+    --line-height-display-sm: 36px;
+  }
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY — REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-standard: 0ms;
+    --motion-editorial: 0ms;
+    --motion-slow: 0ms;
+    --motion-cinematic: 0ms;
+
+    --parallax-subtle: 0%;
+    --parallax-maximum: 0%;
+  }
+}

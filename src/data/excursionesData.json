@@ -1,0 +1,812 @@
+{
+  "experiences": [
+    {
+      "id": "excursion-salinas-grandes-001",
+      "slug": "salinas-grandes",
+      "type": "excursion",
+      "category": "experiencia-privada",
+      "meta": {
+        "title": "Salinas Grandes y Purmamarca",
+        "description": "Descubrí Salinas Grandes en una experiencia privada desde Jujuy. Recorré la Quebrada y la Cuesta de Lipán a tu propio ritmo y sin prisas."
+      },
+      "content": {
+        "hero": {
+          "eyebrow": "DÍA COMPLETO · PRIVADO · HASTA 4 PERSONAS",
+          "title": "Salinas Grandes",
+          "subtitle": "El paisaje blanco de la Puna jujeña",
+          "description": "Una jornada para descubrir uno de los paisajes más extraordinarios de Jujuy, atravesando la Quebrada de Humahuaca y la Cuesta de Lipán hasta llegar a las Salinas Grandes.",
+          "image": "/excursiones/salinas/salinas-hero.avif",
+          "videoUrl": "/videos/excursiones/salinas-grandes/hero.mp4",
+          "alt": "Salinas Grandes en Jujuy"
+        },
+        "imageFeatureParallax": {
+          "id": "salinas-landscape",
+          "image": [
+            "/excursiones/salinas/Salt-Flats-Atacama-Desert-Chile_th-767x512.jpg",
+            "/excursiones/salinas/cuesta-de-lipan-mountain-road-2400x1400-f50_50.avif",
+            "/excursiones/salinas/807000-salinas-grandes-highlights-of-northern-argentina-and-chile.avif",
+            "/excursiones/salinas/Atacama-Salt-Flats-Flamingos-Chile_th-767x512.jpg",
+            "/excursiones/salinas/Untitled-design-40.jpg.webp"
+          ],
+          "alt": "Paisaje de Salinas Grandes"
+        },
+        "splitContent": {
+          "id": "experiencia",
+          "heading": "Una inmensidad que cambia con la luz",
+          "description": "El recorrido hacia Salinas Grandes atraviesa algunos de los paisajes más característicos de la geografía jujeña. La ruta asciende desde la Quebrada hacia la Puna, pasando por la Cuesta de Lipán antes de llegar al gran salar.",
+          "image": "/excursiones/salinas/cuesta-de-lipan-mountain-road-2400x1400-f50_50.avif",
+          "imagePosition": "right",
+          "theme": "transparent"
+        },
+        "quoteBanner": {
+          "text": "Jujuy se entiende mejor cuando hay tiempo para mirar el paisaje.",
+          "author": "Sergio",
+          "bgImage": "/excursiones/salinas/775333-ojo-del-mar-crossing-the-andes--from-argentina-to-chile.avif"
+        },
+        "carouselGallery": {
+          "title": "El recorrido",
+          "slides": [
+            {
+              "imageUrl": "/excursiones/salinas/Salt-Flats-Atacama-Desert-Chile_th-767x512.jpg",
+              "caption": "Quebrada de Humahuaca"
+            },
+            {
+              "imageUrl": "/excursiones/salinas/cuesta-de-lipan-mountain-road-2400x1400-f50_50.avif",
+              "caption": "Cuesta de Lipán"
+            },
+            {
+              "imageUrl": "/excursiones/salinas/807000-salinas-grandes-highlights-of-northern-argentina-and-chile.avif",
+              "caption": "Salinas Grandes"
+            }
+          ]
+        },
+        "sectionHeader": {
+          "id": "itinerario",
+          "title": "EL RECORRIDO",
+          "subtitle": "Una jornada por la Quebrada y la Puna"
+        },
+        "timelineItinerary": {
+          "days": [
+            {
+              "dayNumber": 1,
+              "title": "Salida desde San Salvador de Jujuy",
+              "description": "Comenzamos el recorrido rumbo al norte por la Quebrada de Humahuaca.",
+              "image": "/excursiones/salinas/AdobeStock_79966150.jpg"
+            },
+            {
+              "dayNumber": 2,
+              "title": "Cuesta de Lipán",
+              "description": "Ascenso serpenteante hacia la Puna alcanzando los 4.170 msnm.",
+              "image": "/excursiones/salinas/istockphoto-1290018712-2048x2048.jpg"
+            },
+            {
+              "dayNumber": 3,
+              "title": "Salinas Grandes",
+              "description": "Tiempo para contemplar, caminar y fotografiar la inmensidad del salar.",
+              "image": "/excursiones/salinas/807000-salinas-grandes-highlights-of-northern-argentina-and-chile.jpeg"
+            },
+            {
+              "dayNumber": 4,
+              "title": "Regreso",
+              "description": "Descenso y regreso a San Salvador de Jujuy con el cambio de luz de la tarde.",
+              "image": "/excursiones/salinas/37J4LTWTAFB6BPDMTKHCJHR4QY.jpg"
+            }
+          ]
+        },
+        "routeMap": {
+          "id": "mapa",
+          "title": "La Geografía",
+          "description": "De la ciudad a la Puna jujeña.",
+          "image": "/excursiones/salinas/salinas-hero.avif",
+          "locations": [
+            "San Salvador de Jujuy",
+            "Purmamarca",
+            "Cuesta de Lipán",
+            "Salinas Grandes"
+          ]
+        },
+        "infoGrid": {
+          "id": "informacion",
+          "title": "Todo lo que necesitás saber antes de viajar",
+          "items": [
+            {
+              "label": "Duración",
+              "value": "Jornada completa (aprox. 8-9 horas)"
+            },
+            {
+              "label": "Modalidad",
+              "value": "Privada"
+            },
+            {
+              "label": "Pasajeros",
+              "value": "Hasta 4 personas"
+            },
+            {
+              "label": "Salida y regreso",
+              "value": "San Salvador de Jujuy"
+            },
+            {
+              "label": "Transporte",
+              "value": "Vehículo privado con chofer/guía"
+            },
+            {
+              "label": "Disponibilidad",
+              "value": "A coordinar previamente"
+            }
+          ]
+        },
+        "includedFeatures": {
+          "title": "La experiencia incluye",
+          "included": [
+            "Transporte privado exclusivo para tu grupo",
+            "Atención personalizada y acompañamiento durante todo el recorrido",
+            "Itinerario flexible adaptado al ritmo del grupo",
+            "Paradas fotográficas y descansos a demanda"
+          ],
+          "notIncluded": [
+            "Alimentación y bebidas",
+            "Gastos personales y compras locales",
+            "Servicios o ingresos no especificados"
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿La excursión es privada?",
+              "answer": "Sí. La experiencia se realiza de manera privada para un máximo de cuatro personas."
+            },
+            {
+              "question": "¿Cuánto dura la excursión?",
+              "answer": "Es de jornada completa, con una duración aproximada de entre 8 y 9 horas."
+            },
+            {
+              "question": "¿Afecta la altura durante el recorrido?",
+              "answer": "Se asciende gradualmente pasando por los 4.170 msnm en Lipán. Sergio acompaña con un ritmo pausado e hidratación constante."
+            },
+            {
+              "question": "¿Qué conviene llevar?",
+              "answer": "Anteojos de sol con filtro UV (indispensables en el salar), protector solar, abrigo en capas y calzado cómodo."
+            },
+            {
+              "question": "¿Cómo consulto disponibilidad?",
+              "answer": "Podés consultarnos la fecha en la que querés viajar y te confirmaremos disponibilidad, tarifa y detalles."
+            }
+          ]
+        },
+        "leadMagnetCTA": {
+          "title": "Recibí el dossier de Salinas Grandes",
+          "description": "Te enviamos por email el recorrido, la experiencia, información práctica y recomendaciones para preparar tu viaje.",
+          "formType": "dossier",
+          "experienceId": "excursion-salinas-grandes-001",
+          "buttonLabel": "Recibir el dossier"
+        },
+        "relatedContentCards": {
+          "title": "También podés conocer",
+          "trips": [
+            {
+              "name": "Maimará y Tilcara",
+              "image": "/excursiones/maimara-tilcara/maimara02.jpg",
+              "link": "/excursiones/maimara-tilcara"
+            },
+            {
+              "name": "Humahuaca y Hornocal",
+              "image": "/excursiones/hornocal/serrania-del-hornocal.webp",
+              "link": "/excursiones/humahuaca-hornocal"
+            }
+          ]
+        },
+        "finalCTA": {
+          "title": "Salinas Grandes te espera",
+          "description": "Consultá disponibilidad, tarifa y detalles para realizar esta experiencia de manera privada.",
+          "buttonLabel": "Consultar disponibilidad →",
+          "buttonHref": "/contacto?interes=salinas-grandes",
+          "bgImage": "/excursiones/salinas/775333-ojo-del-mar-crossing-the-andes--from-argentina-to-chile.avif"
+        }
+      }
+    },
+    {
+      "id": "excursion-maimara-tilcara-002",
+      "slug": "maimara-tilcara",
+      "type": "excursion",
+      "category": "experiencia-privada",
+      "meta": {
+        "title": "Maimará y Tilcara",
+        "description": "Descubrí Maimará y Tilcara en una experiencia privada por la Quebrada de Humahuaca con tiempo para detenerse y contemplar."
+      },
+      "content": {
+        "hero": {
+          "eyebrow": "DÍA COMPLETO · PRIVADO · HASTA 4 PERSONAS",
+          "title": "Maimará y Tilcara",
+          "subtitle": "Dos pueblos, una historia en el corazón de la Quebrada",
+          "description": "Un recorrido para descubrir los paisajes, pueblos y cultura de la Quebrada de Humahuaca con tiempo para detenerse y conocer cada lugar.",
+          "image": "/excursiones/maimara-tilcara/1_argentina-northwest-hornocal-hill.webp",
+          "videoUrl": "/videos/excursiones/maimara-tilcara/hero.mp4",
+          "alt": "Paisaje de Maimará y Tilcara"
+        },
+        "imageFeatureParallax": {
+          "image": "/excursiones/maimara-tilcara/maimara02.jpg",
+          "alt": "Paleta del Pintor en Maimará"
+        },
+        "splitContent": {
+          "id": "experiencia",
+          "heading": "La Quebrada, sin prisas",
+          "description": "Maimará y Tilcara permiten acercarse a la Quebrada desde dos perspectivas complementarias: la contemplación de sus cerros y la vida cotidiana de sus pueblos.",
+          "image": "/excursiones/maimara-tilcara/maimara02.jpg",
+          "imagePosition": "left",
+          "theme": "transparent"
+        },
+        "carouselGallery": {
+          "title": "Momentos del recorrido",
+          "slides": [
+            {
+              "imageUrl": "/excursiones/maimara-tilcara/pexels-facu-tachu-311818446-13555611.jpg",
+              "caption": "Maimará y la Paleta del Pintor"
+            },
+            {
+              "imageUrl": "/excursiones/maimara-tilcara/pexels-mluiseze-21336630.jpg",
+              "caption": "Calles y cultura en Tilcara"
+            },
+            {
+              "imageUrl": "/excursiones/maimara-tilcara/1749eb0689c0f23fa0251422e4f80ddc7a68011c2137a1d0_840.jpg",
+              "caption": "Paisajes de la Quebrada"
+            }
+          ]
+        },
+        "sectionHeader": {
+          "id": "itinerario",
+          "title": "EL RECORRIDO",
+          "subtitle": "Una jornada por el corazón de la Quebrada"
+        },
+        "timelineItinerary": {
+          "days": [
+            {
+              "dayNumber": 1,
+              "title": "Maimará",
+              "description": "Pausa frente a la Paleta del Pintor y recorrido por las quintas y calles del pueblo.",
+              "image": "/excursiones/maimara-tilcara/pexels-facu-tachu-311818446-13555611.jpg"
+            },
+            {
+              "dayNumber": 2,
+              "title": "Tilcara",
+              "description": "Tiempo para conocer su plaza, museos, talleres de artesanos y sitios arqueológicos.",
+              "image": "/excursiones/maimara-tilcara/pexels-mluiseze-20649504.jpg"
+            },
+            {
+              "dayNumber": 3,
+              "title": "Regreso",
+              "description": "Regreso a San Salvador de Jujuy contemplando el atardecer sobre los cerros.",
+              "image": "/excursiones/maimara-tilcara/pexels-mluiseze-18810163.jpg"
+            }
+          ]
+        },
+        "routeMap": {
+          "id": "mapa",
+          "title": "La Geografía",
+          "image": "/excursiones/maimara-tilcara/Hill-Of-Seven-Colors-Purmamarca-Argentina_th-767x512.jpg",
+          "locations": [
+            "San Salvador de Jujuy",
+            "Maimará",
+            "Tilcara"
+          ]
+        },
+        "infoGrid": {
+          "id": "informacion",
+          "title": "Todo lo que necesitás saber antes de viajar",
+          "items": [
+            {
+              "label": "Duración",
+              "value": "Jornada completa (aprox. 7-8 horas)"
+            },
+            {
+              "label": "Modalidad",
+              "value": "Privada"
+            },
+            {
+              "label": "Pasajeros",
+              "value": "Hasta 4 personas"
+            },
+            {
+              "label": "Salida y regreso",
+              "value": "San Salvador de Jujuy"
+            }
+          ]
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿La excursión es privada?",
+              "answer": "Sí. La experiencia es exclusiva para vos y tu grupo de hasta cuatro personas."
+            },
+            {
+              "question": "¿Cuánto dura la excursión?",
+              "answer": "Tiene una duración aproximada de 7 a 8 horas, adaptándose al tiempo que quieras dedicarle a cada parada."
+            },
+            {
+              "question": "¿Se puede adaptar el recorrido?",
+              "answer": "Sí. Podemos conversar previamente sobre tus intereses arqueológicos, gastronómicos o culturales."
+            },
+            {
+              "question": "¿Cómo consulto disponibilidad?",
+              "answer": "Podés consultarnos la fecha en la que querés viajar y te confirmaremos disponibilidad, tarifa y detalles."
+            }
+          ]
+        },
+        "finalCTA": {
+          "title": "Maimará y Tilcara te esperan",
+          "description": "Consultá disponibilidad, tarifa y detalles para realizar esta experiencia de manera privada.",
+          "buttonLabel": "Consultar disponibilidad →",
+          "buttonHref": "/contacto?interes=maimara-tilcara",
+          "bgImage": "/excursiones/maimara-tilcara/bebf1de6-fc5e-473b-802d-d1b70c2c5078.webp"
+        }
+      }
+    },
+    {
+      "id": "excursion-humahuaca-hornocal-003",
+      "slug": "humahuaca-hornocal",
+      "type": "excursion",
+      "category": "experiencia-privada",
+      "meta": {
+        "title": "Humahuaca y Hornocal",
+        "description": "Conocé Humahuaca y el imponente mirador del Hornocal (Cerro de los 14 Colores) en una experiencia privada de día completo."
+      },
+      "content": {
+        "hero": {
+          "eyebrow": "DÍA COMPLETO · PRIVADO · HASTA 4 PERSONAS",
+          "title": "Humahuaca y Hornocal",
+          "subtitle": "La Quebrada en toda su profundidad",
+          "description": "Un recorrido hacia el norte de la Quebrada de Humahuaca para conocer el poblado histórico y contemplar la majestuosidad del Hornocal.",
+          "image": "/excursiones/hornocal/serrania-del-hornocal.webp",
+          "videoUrl": "/videos/excursiones/humahuaca-hornocal/hero.mp4",
+          "alt": "Serranía del Hornocal en Jujuy"
+        },
+        "imageFeatureParallax": {
+          "image": "/excursiones/hornocal/hornocal desde jujuy 1.png",
+          "alt": "Cerro de los 14 Colores del Hornocal"
+        },
+        "splitContent": {
+          "id": "experiencia",
+          "heading": "Donde la montaña cambia de color",
+          "description": "El camino hacia Humahuaca permite descubrir la diversidad de paisajes y pueblos de la Quebrada hasta llegar al Hornocal, uno de los grandes miradores geológicos de la región.",
+          "image": "/excursiones/hornocal/hornocal desde jujuy 1.png",
+          "imagePosition": "right",
+          "theme": "transparent"
+        },
+        "carouselGallery": {
+          "title": "Paisajes del norte",
+          "slides": [
+            {
+              "imageUrl": "/excursiones/hornocal/pexels-lucasleonelsuarez-20887392.jpg",
+              "caption": "Quebrada de Humahuaca"
+            },
+            {
+              "imageUrl": "/excursiones/hornocal/1526308028367.jpeg",
+              "caption": "Casco histórico de Humahuaca"
+            },
+            {
+              "imageUrl": "/excursiones/hornocal/serranía-de-hornocal-en-la-quebrada-de-humahuaca-jujuy-v0-t8hu4pxem3871.webp",
+              "caption": "Serranía del Hornocal"
+            }
+          ]
+        },
+        "sectionHeader": {
+          "id": "itinerario",
+          "title": "EL RECORRIDO",
+          "subtitle": "Una jornada hacia el norte profundo"
+        },
+        "timelineItinerary": {
+          "days": [
+            {
+              "dayNumber": 1,
+              "title": "Recorrido por la Quebrada",
+              "description": "Ascendemos por la Quebrada de Humahuaca hacia el norte con paradas estratégicas de contemplación.",
+              "image": "/excursiones/hornocal/6341b54bee868.jpg"
+            },
+            {
+              "dayNumber": 2,
+              "title": "Humahuaca",
+              "description": "Tiempo para recorrer el centro histórico, sus iglesias y su mercado artesanal.",
+              "image": "/excursiones/hornocal/images (5).jpg"
+            },
+            {
+              "dayNumber": 3,
+              "title": "Hornocal",
+              "description": "Llegada al mirador a 4.350 msnm para contemplar la serranía con la mejor luz de la tarde.",
+              "image": "/excursiones/hornocal/images (6).jpg"
+            },
+            {
+              "dayNumber": 4,
+              "title": "Regreso",
+              "description": "Regreso a San Salvador de Jujuy tras una jornada completa.",
+              "image": "/excursiones/hornocal/images (7).jpg"
+            }
+          ]
+        },
+        "routeMap": {
+          "id": "mapa",
+          "title": "La Geografía",
+          "image": "/excursiones/hornocal/serrania-del-hornocal.webp",
+          "locations": [
+            "San Salvador de Jujuy",
+            "Humahuaca",
+            "Hornocal"
+          ]
+        },
+        "infoGrid": {
+          "id": "informacion",
+          "title": "Todo lo que necesitás saber antes de viajar",
+          "items": [
+            {
+              "label": "Duración",
+              "value": "Jornada completa (aprox. 9-10 horas)"
+            },
+            {
+              "label": "Modalidad",
+              "value": "Privada"
+            },
+            {
+              "label": "Pasajeros",
+              "value": "Hasta 4 personas"
+            },
+            {
+              "label": "Salida y regreso",
+              "value": "San Salvador de Jujuy"
+            }
+          ]
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿La excursión es privada?",
+              "answer": "Sí, es una experiencia exclusiva para tu grupo de hasta cuatro personas."
+            },
+            {
+              "question": "¿Cómo se maneja la altura en el Hornocal?",
+              "answer": "El mirador está a 4.350 msnm. Sergio administra los tiempos de ascenso y permanencia para garantizar una aclimatación confortable."
+            },
+            {
+              "question": "¿Cuál es el mejor momento para ver el Hornocal?",
+              "answer": "La tarde, cuando los rayos del sol iluminan de frente los pliegues y tonalidades minerales del cerro."
+            },
+            {
+              "question": "¿Cómo consulto disponibilidad?",
+              "answer": "Podés consultarnos la fecha en la que querés viajar y te confirmaremos disponibilidad, tarifa y detalles."
+            }
+          ]
+        },
+        "finalCTA": {
+          "title": "Humahuaca y Hornocal te esperan",
+          "description": "Consultá disponibilidad, tarifa y detalles para realizar esta experiencia de manera privada.",
+          "buttonLabel": "Consultar disponibilidad →",
+          "buttonHref": "/contacto?interes=humahuaca-hornocal",
+          "bgImage": "/excursiones/hornocal/d1c9a433-dd4f-486a-94bb-72fc630f51c2.jpg"
+        }
+      }
+    },
+    {
+      "id": "excursion-city-tour-jujuy-004",
+      "slug": "city-tour-san-salvador-de-jujuy",
+      "type": "excursion",
+      "category": "experiencia-privada",
+      "meta": {
+        "title": "City Tour San Salvador de Jujuy",
+        "description": "Conocé San Salvador de Jujuy con un recorrido privado por su historia, arquitectura y lugares esenciales."
+      },
+      "content": {
+        "hero": {
+          "eyebrow": "MEDIA JORNADA · PRIVADO · HASTA 4 PERSONAS",
+          "title": "City Tour San Salvador de Jujuy",
+          "subtitle": "Una ciudad para mirar más allá de la primera impresión",
+          "description": "Un recorrido por San Salvador de Jujuy para conocer su historia, arquitectura y algunos de los lugares que ayudan a entender la identidad de la provincia.",
+          "image": "/excursiones/city-tour/E6KDCEKLNRH7ZNVZZX4655RKCY.avif",
+          "videoUrl": "/videos/excursiones/city-tour-jujuy/hero.mp4",
+          "alt": "San Salvador de Jujuy"
+        },
+        "imageFeatureParallax": {
+          "image": "/excursiones/city-tour/DSC_6639-scaled.jpg",
+          "alt": "Arquitectura de San Salvador de Jujuy"
+        },
+        "splitContent": {
+          "id": "experiencia",
+          "heading": "La puerta de entrada a Jujuy",
+          "description": "Antes de subir hacia la Quebrada, vale la pena conocer la ciudad desde la que comienza el viaje. Su historia y arquitectura permiten entender las raíces de la identidad jujeña.",
+          "image": "/excursiones/city-tour/DSC_6639-scaled.jpg",
+          "imagePosition": "right",
+          "theme": "transparent"
+        },
+        "carouselGallery": {
+          "title": "La ciudad",
+          "slides": [
+            {
+              "imageUrl": "/excursiones/city-tour/images (10).jpg",
+              "caption": "Centro histórico y Casa de Gobierno"
+            },
+            {
+              "imageUrl": "/excursiones/city-tour/lola-mora-museo-museum-jujuy-15082026in3.webp",
+              "caption": "Arquitectura y esculturas de Lola Mora"
+            },
+            {
+              "imageUrl": "/excursiones/city-tour/lola-mora-museo-museum-jujuy-15082026in4.webp",
+              "caption": "San Salvador de Jujuy"
+            }
+          ]
+        },
+        "sectionHeader": {
+          "id": "itinerario",
+          "title": "EL RECORRIDO",
+          "subtitle": "Una mirada profunda a la capital jujeña"
+        },
+        "timelineItinerary": {
+          "days": [
+            {
+              "dayNumber": 1,
+              "title": "Centro histórico",
+              "description": "Plaza Belgrano, Catedral Basílica y las obras de Lola Mora en Casa de Gobierno.",
+              "image": "/excursiones/city-tour/63ae084cb58c4.jpg"
+            },
+            {
+              "dayNumber": 2,
+              "title": "Historia e identidad",
+              "description": "Recorrido por los barrios tradicionales y miradores urbanos con contexto histórico.",
+              "image": "/excursiones/city-tour/bandera1.webp"
+            }
+          ]
+        },
+        "routeMap": {
+          "id": "mapa",
+          "title": "La Geografía",
+          "image": "/excursiones/city-tour/DSC_6639-scaled.jpg",
+          "locations": [
+            "Plaza Belgrano",
+            "Catedral Basílica",
+            "Casa de Gobierno",
+            "Miradores urbanos"
+          ]
+        },
+        "infoGrid": {
+          "id": "informacion",
+          "title": "Todo lo que necesitás saber antes de viajar",
+          "items": [
+            {
+              "label": "Duración",
+              "value": "Media jornada (aprox. 3-4 horas)"
+            },
+            {
+              "label": "Modalidad",
+              "value": "Privada"
+            },
+            {
+              "label": "Pasajeros",
+              "value": "Hasta 4 personas"
+            },
+            {
+              "label": "Salida y regreso",
+              "value": "San Salvador de Jujuy"
+            }
+          ]
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿La excursión es privada?",
+              "answer": "Sí. La experiencia se realiza de manera privada para un grupo de hasta cuatro personas."
+            },
+            {
+              "question": "¿Cuánto dura la excursión?",
+              "answer": "Es de media jornada (unas 3 a 4 horas), ideal para coordinar por la mañana o por la tarde."
+            },
+            {
+              "question": "¿Cómo consulto disponibilidad?",
+              "answer": "Podés consultarnos la fecha en la que querés viajar y te confirmaremos disponibilidad, tarifa y detalles."
+            }
+          ]
+        },
+        "finalCTA": {
+          "title": "San Salvador de Jujuy te espera",
+          "description": "Consultá disponibilidad, tarifa y detalles para realizar esta experiencia de manera privada.",
+          "buttonLabel": "Consultar disponibilidad →",
+          "buttonHref": "/contacto?interes=city-tour-jujuy",
+          "bgImage": "/excursiones/city-tour/inicio-obra-museo-lola-mora.webp"
+        }
+      }
+    },
+    {
+      "id": "excursion-carnaval-jujuy-2027",
+      "slug": "carnaval-2027",
+      "type": "excursion",
+      "category": "experiencia-privada",
+      "meta": {
+        "title": "Carnaval de Jujuy 2027",
+        "description": "Viví cuatro días de Carnaval en Jujuy de forma privada: comparsas en Humahuaca, la bajada de los diablos en Uquía y celebración familiar en Abra Pampa."
+      },
+      "content": {
+        "hero": {
+          "eyebrow": "5 AL 8 DE FEBRERO · 4 DÍAS / 3 NOCHES · PRIVADO · HASTA 4 PERSONAS",
+          "title": "Carnaval de Jujuy 2027",
+          "subtitle": "Cuatro días para vivir el Carnaval desde Humahuaca",
+          "description": "Una experiencia privada entre comparsas, coplas, pueblos y celebraciones tradicionales de la Quebrada y la Puna jujeña.",
+          "image": "/excursiones/carnaval/pexels-mluiseze-21337282.jpg",
+          "videoUrl": "/excursiones/carnaval/15698870-hd_1080_1920_60fps.mp4",
+          "alt": "Celebración del Carnaval en Humahuaca y Quebrada de Jujuy"
+        },
+        "imageFeatureParallax": {
+          "id": "carnaval-landscape",
+          "image": [
+            "/excursiones/carnaval/pexels-mluiseze-21337282.jpg",
+            "/excursiones/carnaval/pexels-mluiseze-21337283.jpg",
+            "/excursiones/carnaval/pexels-mluiseze-26705851.jpg",
+            "/excursiones/carnaval/pexels-mluiseze-36227382.jpg",
+            "/excursiones/carnaval/pexels-mluiseze-36227383.jpg"
+          ],
+          "alt": "Tradiciones y festejos del Carnaval en Jujuy"
+        },
+        "splitContent": {
+          "id": "experiencia",
+          "heading": "El Carnaval en la Quebrada",
+          "description": "El Carnaval jujeño reúne tradiciones andinas, música, danza y formas de celebración que se transmiten de generación en generación. Durante estos días, los pueblos de la Quebrada cambian su ritmo y las comparsas ocupan las calles.",
+          "image": "/excursiones/carnaval/pexels-mluiseze-21337283.jpg",
+          "imagePosition": "left",
+          "theme": "transparent"
+        },
+        "sectionHeader": {
+          "id": "itinerario",
+          "title": "EL RECORRIDO",
+          "subtitle": "Cuatro días para entrar en el Carnaval"
+        },
+        "timelineItinerary": {
+          "days": [
+            {
+              "dayNumber": 1,
+              "title": "Viernes 5 · Llegar a Humahuaca",
+              "description": "Partida desde San Salvador de Jujuy hacia Humahuaca, ingreso al alojamiento y primera noche en las peñas tradicionales.",
+              "image": "/excursiones/carnaval/pexels-mluiseze-21337282.jpg"
+            },
+            {
+              "dayNumber": 2,
+              "title": "Sábado 6 · El Carnaval en las calles",
+              "description": "Recorrido por Humahuaca y traslado a Uquía para presenciar la bajada de los diablos y las comparsas.",
+              "image": "/excursiones/carnaval/pexels-mluiseze-26705851.jpg"
+            },
+            {
+              "dayNumber": 3,
+              "title": "Domingo 7 · Un carnaval en el campo",
+              "description": "Participación en un carnaval familiar en el campo, con ruedas de coplas, bailes tradicionales y celebración comunitaria.",
+              "image": "/excursiones/carnaval/pexels-mluiseze-36227382.jpg"
+            },
+            {
+              "dayNumber": 4,
+              "title": "Lunes 8 · El regreso por la Quebrada",
+              "description": "Regreso hacia San Salvador de Jujuy pasando por Maimará y Purmamarca.",
+              "image": "/excursiones/carnaval/pexels-mluiseze-36227383.jpg"
+            }
+          ]
+        },
+        "routeMap": {
+          "id": "mapa",
+          "title": "La Geografía",
+          "description": "De Humahuaca a las celebraciones del norte.",
+          "image": "/excursiones/carnaval/pexels-mluiseze-21337282.jpg",
+          "locations": ["San Salvador de Jujuy", "Humahuaca", "Uquía", "Abra Pampa", "Maimará", "Purmamarca"]
+        },
+        "infoGrid": {
+          "id": "informacion",
+          "title": "Información práctica",
+          "items": [
+            { "label": "Fecha", "value": "5 al 8 de febrero de 2027" },
+            { "label": "Duración", "value": "4 días / 3 noches" },
+            { "label": "Salida y regreso", "value": "San Salvador de Jujuy" },
+            { "label": "Base del viaje", "value": "Humahuaca" },
+            { "label": "Modalidad", "value": "Viaje privado hasta 4 personas" }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "title": "Preguntas frecuentes",
+          "items": [
+            { "question": "¿Cuándo es el viaje y cuántos días dura?", "answer": "El programa se desarrolla del viernes 5 al lunes 8 de febrero de 2027. Son cuatro días y tres noches." },
+            { "question": "¿Dónde nos alojamos?", "answer": "El programa contempla alojamiento en Humahuaca durante las tres noches del viaje." },
+            { "question": "¿El viaje es privado?", "answer": "Sí. Se trata de un viaje privado para un máximo de cuatro personas." },
+            { "question": "¿Qué conviene llevar?", "answer": "Ropa de abrigo en capas, protección solar, anteojos de sol, hidratación y calzado cómodo." }
+          ]
+        },
+        "finalCTA": {
+          "title": "Cuatro días para vivir el Carnaval",
+          "description": "Consultá disponibilidad, tarifa y detalles del viaje del 5 al 8 de febrero de 2027.",
+          "buttonLabel": "Consultar disponibilidad →",
+          "buttonHref": "/contacto?interes=carnaval-2027",
+          "bgImage": "/excursiones/carnaval/pexels-mluiseze-21337282.jpg"
+        }
+      }
+    },
+    {
+      "id": "excursion-semana-santa-jujuy-2027",
+      "slug": "semana-santa-2027",
+      "type": "excursion",
+      "category": "experiencia-privada",
+      "meta": {
+        "title": "Semana Santa en Jujuy 2027",
+        "description": "Viví Semana Santa en Jujuy: la bajada de la Virgen con bandas de sikuris en Tilcara, iglesias andinas, el Hornocal y las ermitas del Vía Crucis."
+      },
+      "content": {
+        "hero": {
+          "eyebrow": "24 AL 26 DE MARZO · 3 DÍAS · PRIVADO · HASTA 4 PERSONAS",
+          "title": "Semana Santa en Jujuy",
+          "subtitle": "Tres días para vivir las celebraciones de la Quebrada",
+          "description": "Una experiencia privada entre peregrinaciones, bandas de sikuris, iglesias coloniales, ermitas y paisajes de altura.",
+          "image": "/excursiones/semana-santa/68016445605fe__993x610.webp",
+          "alt": "Ermitas y procesión de Semana Santa en Tilcara Jujuy"
+        },
+        "imageFeatureParallax": {
+          "id": "semana-santa-landscape",
+          "image": [
+            "/excursiones/semana-santa/68016445605fe__993x610.webp",
+            "/excursiones/semana-santa/ARCHI_992473.jpg",
+            "/excursiones/semana-santa/ermitas-tilcarajpg.webp",
+            "/excursiones/semana-santa/images (22).jpg",
+            "/excursiones/semana-santa/images (23).jpg"
+          ],
+          "alt": "Expresiones culturales y religiosas de Semana Santa en la Quebrada"
+        },
+        "splitContent": {
+          "id": "experiencia",
+          "heading": "Semana Santa en la Quebrada",
+          "description": "Durante Semana Santa, la Quebrada de Humahuaca se transforma en escenario de antiguas tradiciones religiosas y expresiones culturales que reúnen a comunidades, peregrinos y visitantes.",
+          "image": "/excursiones/semana-santa/ermitas-tilcarajpg.webp",
+          "imagePosition": "left",
+          "theme": "transparent"
+        },
+        "sectionHeader": {
+          "id": "itinerario",
+          "title": "EL RECORRIDO",
+          "subtitle": "Tres días para vivir Semana Santa"
+        },
+        "timelineItinerary": {
+          "days": [
+            { "dayNumber": 1, "title": "Miércoles 24 · La llegada", "description": "Partida hacia Tilcara para acompañar la bajada de la Virgen de Punta Corral, escoltada por bandas de sikuris.", "image": "/excursiones/semana-santa/68016445605fe__993x610.webp" },
+            { "dayNumber": 2, "title": "Jueves 25 · La Quebrada y sus iglesias", "description": "Recorrido por pueblos e iglesias históricas de la Quebrada especialmente ornamentadas para la festividad.", "image": "/excursiones/semana-santa/ARCHI_992473.jpg" },
+            { "dayNumber": 3, "title": "Viernes 26 · Arte, altura y ermitas", "description": "Visita cultural, ascenso al Hornocal y regreso a Tilcara para contemplar las ermitas del Vía Crucis.", "image": "/excursiones/semana-santa/ermitas-tilcarajpg.webp" }
+          ]
+        },
+        "routeMap": {
+          "id": "mapa",
+          "title": "La Geografía",
+          "description": "De San Salvador a la Quebrada de Humahuaca.",
+          "image": "/excursiones/semana-santa/68016445605fe__993x610.webp",
+          "locations": ["San Salvador de Jujuy", "Tilcara", "Quebrada de Humahuaca", "Hornocal"]
+        },
+        "infoGrid": {
+          "id": "informacion",
+          "title": "Información práctica",
+          "items": [
+            { "label": "Fecha", "value": "24 al 26 de marzo de 2027" },
+            { "label": "Duración", "value": "3 días" },
+            { "label": "Salida y regreso", "value": "San Salvador de Jujuy" },
+            { "label": "Modalidad", "value": "Viaje privado hasta 4 personas" },
+            { "label": "Ascenso Hornocal", "value": "Incluido en vehículo 4x4" }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "title": "Preguntas frecuentes",
+          "items": [
+            { "question": "¿Cuándo se realiza el programa?", "answer": "Del 24 al 26 de marzo de 2027. Es un viaje privado para un máximo de cuatro personas." },
+            { "question": "¿El alojamiento está incluido?", "answer": "Sí. El alojamiento correspondiente al programa está incluido en la tarifa." },
+            { "question": "¿Está incluido el ascenso al Hornocal?", "answer": "Sí. El ascenso al mirador se realiza en vehículo 4x4." },
+            { "question": "¿Qué indumentaria conviene llevar?", "answer": "Ropa de abrigo en capas, calzado cómodo, protector solar y anteojos de sol." }
+          ]
+        },
+        "finalCTA": {
+          "title": "Viví Semana Santa en Jujuy",
+          "description": "Consultá disponibilidad, tarifa y detalles para realizar este viaje de manera privada.",
+          "buttonLabel": "Consultar disponibilidad →",
+          "buttonHref": "/contacto?interes=semana-santa-2027",
+          "bgImage": "/excursiones/semana-santa/68016445605fe__993x610.webp"
+        }
+      }
+    }
+  ]
+}

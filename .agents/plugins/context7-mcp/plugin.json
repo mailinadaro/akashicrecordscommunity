@@ -1,0 +1,8 @@
+{
+  "id": "context7-mcp",
+  "name": "Context7 Documentation Server",
+  "version": "1.0.0",
+  "description": "Proporciona al agente documentación y ejemplos de código actualizados en tiempo real",
+  "type": "mcp",
+  "entrypoint": "mcp_config.json"
+}
