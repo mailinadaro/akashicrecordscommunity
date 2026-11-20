@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
-import { Lora, Source_Sans_3 } from "next/font/google";
-import Navigation from "@/components/sections/globales/Navigation";
+import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import Footer from "@/components/sections/globales/Footer";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import GSAPRouteWatcher from "@/components/providers/GSAPRouteWatcher";
 import "./globals.css";
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager } from "@next/third-parties/google";
 import { siteConfig } from "@/config/site.config";
 
-// const lenis = new Lenis();
-
-const lora = Lora({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-display",
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-const sourceSans3 = Source_Sans_3({
+const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-body",
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
@@ -37,20 +36,24 @@ export const metadata: Metadata = {
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
     siteName: siteConfig.brand.name,
-    images: [
-      {
-        url: siteConfig.seo.ogImage,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.brand.name,
-      },
-    ],
+    ...(siteConfig.seo.ogImage
+      ? {
+          images: [
+            {
+              url: siteConfig.seo.ogImage,
+              width: 1200,
+              height: 630,
+              alt: siteConfig.brand.name,
+            },
+          ],
+        }
+      : {}),
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
-    images: [siteConfig.seo.ogImage],
+    ...(siteConfig.seo.ogImage ? { images: [siteConfig.seo.ogImage] } : {}),
   },
 };
 
@@ -59,25 +62,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+
   return (
-    <html lang="es" className={`${lora.variable} ${sourceSans3.variable}`} data-scroll-behavior="smooth">
-      <GoogleTagManager gtmId="GTM-TVL9CDTK" /> 
+    <html lang="es" className={`${cormorantGaramond.variable} ${montserrat.variable}`} data-scroll-behavior="smooth">
+      {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
       <body className="antialiased">
         <SmoothScrollProvider>
-          <Navigation />
-       <div className="relative w-full">
-          <main
-            id="site-content"
-            className="flex flex-col items-center justify-center w-full"
-          >
-            <GSAPRouteWatcher />
-            {children}
-          </main>
-        </div>
+          <div className="relative w-full">
+            <main
+              id="site-content"
+              className="flex flex-col items-center justify-center w-full min-h-screen"
+            >
+              <GSAPRouteWatcher />
+              {children}
+            </main>
+          </div>
           <Footer />
         </SmoothScrollProvider>
       </body>
     </html>
   );
 }
-

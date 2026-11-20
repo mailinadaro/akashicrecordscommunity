@@ -1,34 +1,43 @@
-
+import HeroFullWindow from "@/components/sections/landing/HeroFullWindow";
+import FounderStory from "@/components/sections/landing/FounderStory";
+import ItinerariesListing from "@/components/sections/landing/ItinerariesListing";
+import TimelineItinerary from "@/components/sections/landing/TimelineItinerary";
+import OtherTripsSection from "@/components/sections/landing/OtherTripsSection";
+import InvestmentSection from "@/components/sections/landing/InvestmentSection";
+import FAQAccordion from "@/components/sections/landing/FAQAccordion";
+import FinalCTA from "@/components/sections/landing/FinalCTA";
 
 export default function Home() {
   return (
-    <section className="relative min-h-svh w-full overflow-hidden">
-      <video
-        className="absolute inset-0 h-full w-full object-cover transform scale-132"
-        autoPlay
-        muted
-        loop
-        playsInline
-        aria-hidden="true"
-      >
-        <source src="/tours-video.mp4" type="video/mp4" />
-      </video>
+    <div className="w-full flex flex-col items-center justify-start overflow-hidden">
+      {/* 1. Hero Full Window */}
+      <HeroFullWindow />
 
-      <div className="absolute inset-0 bg-black/30" />
 
-      <div className="relative z-10 flex min-h-svh flex-col items-center justify-end pb-2">
-        <p className="absolute left-1/2 top-1/2 w-[calc(100%-2rem)] max-w-[18rem] -translate-x-1/2 -translate-y-1/2 px-2 text-center font-display text-lg italic text-text-on-action/80">
-          Viajes a Medida y Excursiones <br className="sm:hidden" />
-          Privadas en el Norte Argentino
-        </p>
-        <h1 className="absolute bottom-0 w-full text-center font-display text-9xl uppercase text-text-on-action sm:text-6xl md:text-7xl md:tracking-[0.2em] lg:text-8xl">
-  Vive Jujuy
-</h1>
-      </div>
-        <div>
-    
+      {/* 3. Itineraries Listing */}
+      <ItinerariesListing />
+
+      {/* 4. Timeline Itinerary */}
+      <TimelineItinerary />
+
+      
+      {/* 2. TAMARA */}
+      <FounderStory />
+
+  {/* 6. TESTIMONIOS */}
+
+      {/* 6. Investment Section */}
+      <InvestmentSection />
+
+      {/* 7. FAQ Accordion */}
+      <FAQAccordion />
+
+         {/* 8. Final CTA */}
+      <FinalCTA />
+
+    {/* otros */}
+      <OtherTripsSection />
+   
     </div>
-    </section>
-
   );
 }

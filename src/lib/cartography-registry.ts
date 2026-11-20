@@ -7,10 +7,10 @@ import type {
   RouteMapDataConfig,
 } from "@/types/cartography";
 
-import SalinasMapSvg from "@/components/sections/excursiones/maps/SalinasMapSvg";
-import HornocalMapSvg from "@/components/sections/excursiones/maps/HornocalMapSvg";
-import MaimaraTilcaraMapSvg from "@/components/sections/excursiones/maps/MaimaraTilcaraMapSvg";
-import CarnavalMapSvg from "@/components/sections/excursiones/maps/CarnavalMapSvg";
+const SalinasMapSvg: React.ComponentType = () => null;
+const HornocalMapSvg: React.ComponentType = () => null;
+const MaimaraTilcaraMapSvg: React.ComponentType = () => null;
+const CarnavalMapSvg: React.ComponentType = () => null;
 
 // =============================================================================
 // 1. UTILIDADES MATEMÁTICAS (Piecewise Linear Interpolation)

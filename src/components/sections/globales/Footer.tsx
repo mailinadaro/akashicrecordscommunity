@@ -1,151 +1,167 @@
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import excursionsData from "@/data/excursionesData.json";
-import { Button } from "@/components/ui/atoms/button";
 import { siteConfig } from "@/config/site.config";
 
-const navLinks = siteConfig.navigation.footer;
-const socialLinks = siteConfig.social;
-const legalLinks = siteConfig.legal;
+function InstagramIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
+function MailIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect width="20" height="16" x="2" y="4" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
+
+function YoutubeIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+      <polygon points="10 15 15 12 10 9 10 15" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export default function Footer() {
+  const instagramHref =
+    siteConfig.social.find((s) => s.label.toLowerCase() === "instagram")?.href ||
+    "https://www.instagram.com/akashicrecordscommunity/";
+  const facebookHref =
+    siteConfig.social.find((s) => s.label.toLowerCase() === "facebook")?.href ||
+    "https://www.facebook.com/akashicrecordscommunity";
+  const youtubeHref =
+    siteConfig.social.find((s) => s.label.toLowerCase() === "youtube")?.href ||
+    "https://www.youtube.com/@akashicrecordscommunity";
+  const emailHref = `mailto:${siteConfig.contact.email}`;
+
   return (
-    <footer className="relative z-20 w-full bg-earth-950 border-t border-white/10 px-8 pt-16 pb-6 font-body text-text-on-action md:px-16">
-      
-      {/* CONTENEDOR PRINCIPAL */}
-      <div className="mb-8 flex flex-col gap-8 lg:mb-20 lg:flex-row lg:items-start lg:justify-between">
-        
-        {/* GRILLA DE INFORMACIÓN: 3 Columnas */}
-        <div className="grid w-full grid-cols-1 gap-8 text-sm md:grid-cols-3 lg:w-2/3 lg:gap-16">
-          
-          {/* COLUMNA 1: Navegación Principal */}
-          <div className="flex flex-col gap-4">
-            <p className="font-bold text-base tracking-wider uppercase opacity-90">Navegación</p>
-            <div className="flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <Link 
-                  key={link.href} 
-                  href={link.href} 
-                  className="hover:opacity-70 transition-opacity duration-300"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+    <footer className="relative z-20 w-full bg-plum-950 border-t border-gold-400/20 py-12 sm:py-14 px-6 font-body text-gold-200">
+      <div className="max-w-2xl mx-auto flex flex-col items-center justify-center text-center gap-3 sm:gap-4">
+        {/* 1. Logo de Akashic */}
+        <Link
+          href="/"
+          className="inline-block transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+          aria-label="Ir al inicio"
+        >
+          <Image
+            src="/logos/logo1.png"
+            alt="Akashic Record Community"
+            width={340}
+            height={100}
+            className="h-20 sm:h-24 w-auto object-contain brightness-105"
+            priority={false}
+          />
+        </Link>
 
-          {/* COLUMNA 2: Excursiones */}
-          <div className="flex flex-col gap-4">
-            <p className="font-bold text-base tracking-wider uppercase opacity-90">Excursiones</p>
-            <div className="flex flex-col gap-3">
-              {excursionsData.experiences.slice(0, 6).map((excursion) => (
-                <Link 
-                  key={excursion.slug} 
-                  href={`/excursiones/${excursion.slug}`} 
-                  className="hover:opacity-70 transition-opacity duration-300"
-                >
-                  {excursion.meta.title}
-                </Link>
-              ))}
-            </div>
-          </div>
+        {/* 2. Redes sociales en línea */}
+        <div className="flex items-center justify-center gap-4 sm:gap-5">
+          <a
+            href={instagramHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de Akashic Record Community"
+            className="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center text-gold-300 hover:text-gold-200 hover:border-gold-300 hover:bg-gold-500/10 transition-all duration-300"
+          >
+            <InstagramIcon className="w-4 h-4" />
+          </a>
 
-          {/* COLUMNA 3: Redes Sociales y Contacto 
-          <div className="flex flex-col gap-4">
-            <p className="font-bold text-base tracking-wider uppercase opacity-90">Redes y Contacto</p>
-            <div className="flex flex-col gap-3">
-              <a 
-                href={siteConfig.contact.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-70 transition-opacity duration-300"
-              >
-                WhatsApp: {siteConfig.contact.phoneDisplay}
-              </a>
-              <a 
-                href={`mailto:${siteConfig.contact.email}`}
-                className="hover:opacity-70 transition-opacity duration-300"
-              >
-                {siteConfig.contact.email}
-              </a>
-              {socialLinks.map((social) => (
-                <Link 
-                  key={social.href} 
-                  href={social.href} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="hover:opacity-70 transition-opacity duration-300"
-                >
-                  {social.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-          */}
+          <a
+            href={emailHref}
+            aria-label="Enviar un email a Akashic Record Community"
+            className="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center text-gold-300 hover:text-gold-200 hover:border-gold-300 hover:bg-gold-500/10 transition-all duration-300"
+          >
+            <MailIcon className="w-4 h-4" />
+          </a>
 
+          <a
+            href={facebookHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook de Akashic Record Community"
+            className="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center text-gold-300 hover:text-gold-200 hover:border-gold-300 hover:bg-gold-500/10 transition-all duration-300"
+          >
+            <FacebookIcon className="w-4 h-4" />
+          </a>
+
+          <a
+            href={youtubeHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Canal de YouTube de Akashic Record Community"
+            className="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center text-gold-300 hover:text-gold-200 hover:border-gold-300 hover:bg-gold-500/10 transition-all duration-300"
+          >
+            <YoutubeIcon className="w-4 h-4" />
+          </a>
         </div>
 
-        {/* SECCIÓN DEL CALL TO ACTION (CTA) CON BUTTON SHADCN */}
-        <div className="flex w-full flex-col gap-4 lg:w-1/3 lg:items-end">
-          <Link href="/contacto" tabIndex={-1} className="w-full lg:w-auto">
-            <Button
-              variant="glass"
-              className="w-full lg:w-auto h-12 px-8 text-[11px] font-mono font-semibold uppercase tracking-[0.25em] rounded-none border border-white/20 bg-earth-900/60 text-warm-50 hover:bg-ochre-500 hover:text-earth-950 hover:border-ochre-500 transition-all duration-300 shadow-none cursor-pointer"
-            >
-              Consulta Ahora
-            </Button>
-          </Link>
+        {/* 3. Derechos reservados */}
+        <p className="font-sans text-xs sm:text-sm text-gold-200/80 tracking-wide font-light">
+          Akashic Record Community @ 2016 Todos los derechos reservados
+        </p>
+
+        {/* 4. Soporte y email */}
+        <div className="font-sans text-xs text-gold-300/80 tracking-wide">
+          <span className="font-medium text-gold-400">Soporte: </span>
+          <a
+            href={emailHref}
+            className="hover:text-gold-100 underline underline-offset-4 decoration-gold-400/40 hover:decoration-gold-300 transition-colors"
+          >
+            {siteConfig.contact.email}
+          </a>
         </div>
-
-      </div>
-
-      {/* DETALLE ESTÉTICO: Marca de agua */}
-      <div className="flex w-full flex-col items-center justify-center overflow-visible font-display leading-none tracking-display">
-        <h2 className="text-center text-[10vw] uppercase tracking-[0.04em] text-text-on-action opacity-10 mb-8 select-none">
-          {siteConfig.brand.watermark}
-        </h2>
-      </div>
-
-      {/* PIE DE PÁGINA: Legal y Créditos */}
-      <div className="flex flex-col items-center gap-4 border-t border-text-on-action/10 pt-6 text-center text-xs opacity-80 md:flex-row md:justify-between md:text-right">
-        
-        <div className="flex flex-wrap justify-center gap-4 md:justify-start">
-          {legalLinks.map((link) => (
-            <Link 
-              key={link.href} 
-              href={link.href} 
-              className="hover:underline hover:opacity-100 transition-all"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        <div className="flex flex-col gap-1 md:items-end">
-          <p className="text-center md:text-right">
-            Developed and designed by{" "}
-            <Link 
-              href={siteConfig.credits.author.url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="font-bold hover:underline"
-            >
-              {siteConfig.credits.author.name}
-            </Link>{" "}
-            | Photography by{" "}
-            <Link 
-              href={siteConfig.credits.photography.url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="font-bold hover:underline"
-            >
-              {siteConfig.credits.photography.name}
-            </Link>
-          </p>
-          <p>
-            {siteConfig.brand.name} © {new Date().getFullYear()}. All rights reserved.
-          </p>
-        </div>
-
       </div>
     </footer>
   );

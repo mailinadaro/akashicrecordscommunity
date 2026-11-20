@@ -7,7 +7,7 @@ import IntentTabsSection from "@/components/sections/portal/IntentTabsSection";
 import ActionableNextStepsSection from "@/components/sections/portal/ActionableNextStepsSection";
 
 export const metadata: Metadata = {
-  title: "Dashboard Directivo WEB | Adaro Viajes",
+  title: "Dashboard Directivo WEB | Iniciación Akáshica",
   description:
     "Storytelling de métricas de negocio, salud comercial y toma de decisiones tácticas para el negocio.",
   robots: {

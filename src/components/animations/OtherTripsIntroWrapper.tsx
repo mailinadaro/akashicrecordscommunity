@@ -56,7 +56,6 @@ export default function OtherTripsIntroWrapper({
           }
 
           if (isDesktop) {
-            // Timeline de ScrollTrigger con Pin y scrub sincronizado
             const tl = gsap.timeline({
               scrollTrigger: {
                 trigger: root,
@@ -68,65 +67,23 @@ export default function OtherTripsIntroWrapper({
               },
             });
 
-            // 1. Expulsión de columnas laterales a xPercent: ±120
             if (leftCol) {
-              tl.to(
-                leftCol,
-                {
-                  xPercent: -120,
-                  opacity: 0,
-                  ease: "power1.inOut",
-                },
-                0
-              );
+              tl.to(leftCol, { xPercent: -120, opacity: 0, ease: "power1.inOut" }, 0);
             }
-
             if (rightCol) {
-              tl.to(
-                rightCol,
-                {
-                  xPercent: 120,
-                  opacity: 0,
-                  ease: "power1.inOut",
-                },
-                0
-              );
+              tl.to(rightCol, { xPercent: 120, opacity: 0, ease: "power1.inOut" }, 0);
             }
-
-            // 2. Colapso de padding y gaps del riel flex para entrada limpia a 100vw
             if (flexRow) {
-              tl.to(
-                flexRow,
-                {
-                  paddingLeft: "0px",
-                  paddingRight: "0px",
-                  gap: "0px",
-                  ease: "power1.inOut",
-                },
-                0
-              );
+              tl.to(flexRow, { paddingLeft: "0px", paddingRight: "0px", gap: "0px", ease: "power1.inOut" }, 0);
             }
-
-            // 3. Expansión proporcional de la columna central de 33.333% a 100vw y 100vh
             if (centerCol) {
               tl.fromTo(
                 centerCol,
-                {
-                  width: "33.333%",
-                  height: "88vh",
-                  borderRadius: "0.375rem",
-                },
-                {
-                  width: "100vw",
-                  height: "100vh",
-                  borderRadius: "0rem",
-                  ease: "power1.inOut",
-                },
+                { width: "33.333%", height: "88vh", borderRadius: "0.375rem" },
+                { width: "100vw", height: "100vh", borderRadius: "0rem", ease: "power1.inOut" },
                 0
               );
             }
-
-            // 4. Título se magnifica y revela centrado sobre la imagen dominante
             if (title) {
               tl.fromTo(
                 title,
@@ -135,18 +92,10 @@ export default function OtherTripsIntroWrapper({
                 0.2
               );
             }
-
-            // 5. Niebla inferior disipa suavemente conectando con la grilla
             if (mist) {
-              tl.fromTo(
-                mist,
-                { opacity: 0.3 },
-                { opacity: 1, ease: "none" },
-                0.3
-              );
+              tl.fromTo(mist, { opacity: 0.3 }, { opacity: 1, ease: "none" }, 0.3);
             }
           } else {
-            // Mobile: entrada suave sin pin
             if (title) {
               gsap.fromTo(
                 title,

@@ -38,7 +38,7 @@ const SplitContentSection = ({
 
   const themeClasses = {
     light: 'bg-surface-page text-text-primary',
-    dark: 'bg-earth-900 text-warm-50',
+    dark: 'bg-plum-950 text-gold-200 border-t border-b border-gold-400/20',
     transparent: 'bg-transparent text-text-primary'
   };
 

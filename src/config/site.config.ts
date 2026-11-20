@@ -50,12 +50,15 @@ export interface SiteConfig {
     readonly phone: string;
     readonly phoneDisplay: string;
     readonly whatsapp: string;
+    readonly hotmart: string;
     readonly address: {
       readonly city: string;
       readonly province: string;
       readonly country: string;
     };
   };
+  readonly bookingUrl: string;
+  readonly hotmartUrl: string;
   readonly social: readonly SocialLink[];
   readonly legal: readonly LegalLink[];
   readonly credits: {
@@ -63,13 +66,13 @@ export interface SiteConfig {
       readonly name: string;
       readonly url: string;
     };
-    readonly photography: {
+    readonly photography?: {
       readonly name: string;
       readonly url: string;
     };
   };
   readonly navigation: {
-    readonly main: readonly (NavMenuItem & { readonly image: string })[];
+    readonly main: readonly NavMenuItem[];
     readonly footer: readonly NavMenuItem[];
   };
   readonly analytics?: {
@@ -79,87 +82,67 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   brand: {
-    name: "Adaro Viajes",
-    legalName: "Jujuy Adentro Expediciones Privadas",
-    tagline: "Viajes a Medida y Excursiones Privadas",
-    watermark: "ADARO VIAJES",
-    description: "Disfruta de Jujuy de forma privada y personalizada.",
+    name: "Iniciación Akáshica",
+    legalName: "Iniciación Akáshica",
+    tagline: "Iniciación y Lectura en Registros Akáshicos",
+    watermark: "INICIACIÓN AKÁSHICA",
+    description: "Espacio de formación, lectura e iniciación en Registros Akáshicos.",
     logo: {
-      src: "/logoADARO.svg",
-      alt: "Logo de Jujuy Adentro",
+      src: "",
+      alt: "Iniciación Akáshica",
       width: 150,
       height: 50,
     },
   },
   seo: {
-    defaultTitle: "Jujuy Adentro — Viajes a Medida y Excursiones Privadas",
-    titleTemplate: "%s | Jujuy Adentro",
+    defaultTitle: "Iniciación Akáshica — Registros Akáshicos",
+    titleTemplate: "%s | Iniciación Akáshica",
     defaultDescription:
-      "Disfruta de Jujuy de forma privada y personalizada con expediciones exclusivas por la Quebrada de Humahuaca, Puna y Salinas Grandes.",
-    siteUrl: "https://excursiones.adaroviajes.com",
-    ogImage: "/default.jpg",
+      "Espacio de formación, lectura e iniciación en Registros Akáshicos.",
+    siteUrl: "https://www.akashicrecordscommunity.com",
+    ogImage: "",
     keywords: [
-      "Jujuy",
-      "Turismo Jujuy",
-      "Excursiones Privadas Jujuy",
-      "Viajes a Medida",
-      "Salinas Grandes",
-      "Quebrada de Humahuaca",
-      "Purmamarca",
-      "Tilcara",
-      "Hornocal",
+      "Iniciación Akáshica",
+      "Registros Akáshicos",
+      "Lectura de Registros Akáshicos",
+      "Espiritualidad",
+      "Akashic Records Community",
     ],
-    locale: "es_AR",
+    locale: "es_MX",
   },
   contact: {
-    email: "info@jujuyadentro.com.ar",
-    phone: "+5492804292490",
-    phoneDisplay: "+54 9 280 429-2490",
-    whatsapp:
-      "https://api.whatsapp.com/send?phone=+2804292490&text=%C2%A1Hola!%20Acabo%20de%20enviar%20una%20consulta%20desde%20la%20web%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20mi%20viaje%20a%20Jujuy.",
+    email: "akashicrecordscommunity@gmail.com",
+    phone: "+525559465126",
+    phoneDisplay: "+52 55 5946 5126",
+    whatsapp: "https://wa.me/525559465126",
+    hotmart: "https://pay.hotmart.com/K108578931R?bid=1795209625313",
     address: {
-      city: "San Salvador de Jujuy",
-      province: "Jujuy",
-      country: "Argentina",
+      city: "Tepoztlán",
+      province: "México",
+      country: "México",
     },
   },
+  bookingUrl: "https://pay.hotmart.com/K108578931R?bid=1795209625313",
+  hotmartUrl: "https://pay.hotmart.com/K108578931R?bid=1795209625313",
   social: [
-    { label: "Instagram", href: "https://www.instagram.com" },
-    { label: "Facebook", href: "https://www.facebook.com" },
+    { label: "Instagram", href: "https://www.instagram.com/akashicrecordscommunity/" },
+    { label: "Facebook", href: "https://www.facebook.com/akashicrecordscommunity" },
+    { label: "YouTube", href: "https://www.youtube.com/@akashicrecordscommunity" },
+    { label: "Spotify", href: "https://open.spotify.com/show/1Y8lvG7EDuPstSoVitWyDs" },
   ],
-  legal: [
-    { label: "Website Terms of Use", href: "/legal/website-terms" },
-    { label: "Privacy Policy", href: "/legal/privacy-policy" },
-    { label: "Cookies Policy", href: "/legal/cookies-policy" },
-  ],
+  legal: [],
   credits: {
     author: {
-      name: "Mailin Adaro",
+      name: "Diseño y Desarrollo por: Mailin Adaro",
       url: "https://www.linkedin.com/in/mailinadaro/",
-    },
-    photography: {
-      name: "x.",
-      url: "https://www.instagram.com/farfan/",
     },
   },
   navigation: {
-    main: [
-      { label: "Inicio", href: "/", image: "/default.jpg" },
-      { label: "Excursiones", href: "/excursiones", image: "/excursiones.jpg" },
-      { label: "Viajes a Medida", href: "/viajes-a-medida", image: "/viajes-a-medida.jpg" },
-      { label: "Sobre Nosotros", href: "/sobre-nosotros", image: "/nosotros.jpg" },
-      { label: "Contacto", href: "/contacto", image: "/contacto.jpg" },
-    ],
-    footer: [
-      { href: "/", label: "Inicio" },
-      { href: "/sobre-nosotros", label: "Sobre Nosotros" },
-      { href: "/excursiones", label: "Nuestras Excursiones" },
-      { href: "/viajes-a-medida", label: "Diseña tu Viaje a medida" },
-      { href: "/contacto", label: "Contacto" },
-    ],
+    main: [],
+    footer: [],
   },
   analytics: {
-    ga4PropertyId: process.env.GA4_PROPERTY_ID || "560524900",
+    ga4PropertyId: process.env.GA4_PROPERTY_ID || "",
   },
 };
 

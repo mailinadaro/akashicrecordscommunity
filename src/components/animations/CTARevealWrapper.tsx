@@ -99,7 +99,7 @@ export default function CTARevealWrapper({
   return (
     <section
       ref={sectionRef}
-      className={`relative w-full min-h-[80vh] lg:h-screen overflow-hidden flex items-center justify-center text-center px-6 md:px-12 bg-earth-900 ${className}`}
+      className={`relative w-full min-h-[80vh] lg:h-screen overflow-hidden flex items-center justify-center text-center px-6 md:px-12 bg-plum-950 ${className}`}
     >
       {/* Contenedor sobredimensionado para parallax sin corte */}
       <div
@@ -111,7 +111,7 @@ export default function CTARevealWrapper({
 
       {/* Overlay de contraste profundo y gradiente sutil */}
       <div
-        className="absolute inset-0 bg-earth-900/60 lg:bg-black/65 bg-linear-to-t from-earth-900/80 via-transparent to-earth-900/60 pointer-events-none z-10"
+        className="absolute inset-0 bg-plum-950/75 lg:bg-plum-950/70 bg-linear-to-t from-plum-950 via-plum-950/40 to-plum-950 pointer-events-none z-10"
         aria-hidden="true"
       />
 

@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/components/sections/viajes-a-medida/TripFaq.tsx"  ],
+, "src/components/sections/componentes 1/TripFaq.tsx"  ],
   "exclude": ["node_modules"]
 }

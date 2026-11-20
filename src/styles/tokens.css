@@ -1,9 +1,9 @@
 /**
- * Jujuy Adentro — Design Tokens
+ * Iniciacion Akashica — Design Tokens
  * Version: 1.0.0
  *
  * Architecture:
- * Primitive tokens → Semantic tokens
+ * Primitive tokens -> Semantic tokens
  *
  * Components must consume semantic tokens whenever possible.
  */
@@ -13,19 +13,18 @@
      01. COLOR — PRIMITIVES
      ========================================================== */
 
-  /* Warm neutrals */
-  --color-warm-50: #f5f0e7;
-  --color-warm-100: #ede0ce;
-  --color-warm-200: #e4d9c8;
+  /* Violet / Plum scale */
+  --color-plum-950: #331e45;
+  --color-plum-600: #735d8b;
+  --color-plum-200: #c0b5cd;
 
-  /* Text / earth */
-  --color-earth-950: #171512;
-  --color-earth-900: #292621;
-  --color-earth-800: #38332b;
-  --color-earth-700: #4a382d;
-
-  /* Accent */
-  --color-ochre-500: #b68a4a;
+  /* Gold / Amber / Sand scale */
+  --color-gold-700: #946533;
+  --color-gold-650: #946534;
+  --color-gold-500: #ce8b34;
+  --color-gold-400: #af8b5b;
+  --color-gold-300: #c5986a;
+  --color-gold-200: #dfb084;
 
 
   /* ==========================================================
@@ -35,20 +34,23 @@
      Do not freely introduce these into the website UI.
      ========================================================== */
 
-  --color-brand-earth: #4a382d;
-  --color-brand-terracotta: #7b4a34;
-  --color-brand-rose: #a8664f;
-  --color-brand-ochre: #b68a4a;
-  --color-brand-stone: #c8b69a;
-  --color-brand-warm-terracotta: #c2643d;
+  --color-brand-plum-dark: var(--color-plum-950);
+  --color-brand-plum-mid: var(--color-plum-600);
+  --color-brand-plum-soft: var(--color-plum-200);
+  --color-brand-gold-deep: var(--color-gold-700);
+  --color-brand-gold-warm: var(--color-gold-650);
+  --color-brand-gold-bright: var(--color-gold-500);
+  --color-brand-gold-muted: var(--color-gold-400);
+  --color-brand-gold-sand: var(--color-gold-300);
+  --color-brand-gold-light: var(--color-gold-200);
 
 
   /* ==========================================================
      03. COLOR — STATES / SYSTEM
      ========================================================== */
 
-  --color-error: #a33a32;
-  --color-success: #4f6948;
+  --color-error: var(--color-gold-700);
+  --color-success: var(--color-plum-600);
 
 
   /* ==========================================================
@@ -57,25 +59,25 @@
      ========================================================== */
 
   /* Surfaces */
-  --color-surface-page: var(--color-warm-50);
-  --color-surface-secondary: var(--color-warm-100);
-  --color-surface-tertiary: var(--color-warm-200);
+  --color-surface-page: var(--color-gold-200);
+  --color-surface-secondary: var(--color-plum-200);
+  --color-surface-tertiary: var(--color-gold-300);
 
   /* Text */
-  --color-text-primary: var(--color-earth-900);
-  --color-text-secondary: var(--color-earth-700);
+  --color-text-primary: var(--color-plum-950);
+  --color-text-secondary: var(--color-plum-600);
 
   /* Actions */
-  --color-surface-action: var(--color-earth-700);
-  --color-surface-action-hover: var(--color-ochre-500);
-  --color-text-on-action: var(--color-warm-50);
+  --color-surface-action: var(--color-plum-950);
+  --color-surface-action-hover: var(--color-gold-500);
+  --color-text-on-action: var(--color-gold-200);
 
   /* Borders */
-  --color-border-default: var(--color-warm-200);
-  --color-border-focus: var(--color-ochre-500);
+  --color-border-default: var(--color-gold-400);
+  --color-border-focus: var(--color-gold-500);
 
   /* Icons */
-  --color-icon-primary: var(--color-earth-700);
+  --color-icon-primary: var(--color-plum-950);
 
   /* States */
   --color-state-error: var(--color-error);
@@ -86,8 +88,8 @@
      05. TYPOGRAPHY — FAMILIES
      ========================================================== */
 
-  --font-display: "Lora", Georgia, serif;
-  --font-body: "Source Sans 3", Arial, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Montserrat", Arial, sans-serif;
   --font-mono: var(--font-body);
 
 
