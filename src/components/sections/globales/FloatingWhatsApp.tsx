@@ -35,11 +35,12 @@ export default function FloatingWhatsApp({
 }: FloatingWhatsAppProps) {
   const pathname = usePathname();
 
-  // Aislamiento del Portal administrativo y Opt-in Entre Dos Ciclos
+  // Aislamiento del Portal administrativo y Opt-in / Thank You de Entre Dos Ciclos
   if (
     pathname?.startsWith("/portal") ||
     pathname?.startsWith("/entre-ciclos") ||
-    pathname?.startsWith("/entre-dos-ciclos")
+    pathname?.startsWith("/entre-dos-ciclos") ||
+    pathname?.startsWith("/thank-you/entre-dos-ciclos")
   ) {
     return null;
   }

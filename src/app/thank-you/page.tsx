@@ -6,6 +6,7 @@ import WebinarThankYou from "@/components/sections/thank-you/templates/WebinarTh
 import LeadMagnetThankYou from "@/components/sections/thank-you/templates/LeadMagnetThankYou";
 import EvergreenCourseThankYou from "@/components/sections/thank-you/templates/EvergreenCourseThankYou";
 import MembershipThankYou from "@/components/sections/thank-you/templates/MembershipThankYou";
+import EntreDosCiclosThankYou from "@/components/sections/thank-you/templates/EntreDosCiclosThankYou";
 
 interface ThankYouPageProps {
   searchParams: Promise<{
@@ -45,6 +46,11 @@ const METADATA_BY_TYPE: Record<string, { title: string; description: string }> =
     title: "¡Bienvenida a Alma Presente! — Pase Anual",
     description:
       "Tu membresía anual está activa. Ingresá a la comunidad, explora los rituales mensuales y participa de los encuentros.",
+  },
+  "entre-dos-ciclos": {
+    title: "¡Falta 1 paso para completar tu registro! — Entre Dos Ciclos",
+    description:
+      "Tu registro a Entre Dos Ciclos está al 70%. Entra al Grupo VIP de WhatsApp para completarlo y recibir el acceso al encuentro del 12 de diciembre.",
   },
 };
 
@@ -90,6 +96,8 @@ export default async function ThankYouPage({ searchParams }: ThankYouPageProps) 
       return <EvergreenCourseThankYou userEmail={email} orderNumber={order} />;
     case "membership":
       return <MembershipThankYou userEmail={email} orderNumber={order} />;
+    case "entre-dos-ciclos":
+      return <EntreDosCiclosThankYou userEmail={email} />;
     case "live":
     case "iniciacion":
       return <LiveProductThankYou userEmail={email} orderNumber={order} />;
