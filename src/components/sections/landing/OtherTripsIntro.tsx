@@ -9,7 +9,7 @@ export interface OtherTripsIntroProps {
 }
 
 export const DEFAULT_COMMUNITY_IMAGES = [
-  "/comunidad/0H6A5228.jpg",
+  "/comunidad/0H6A5949.jpg",
   "/comunidad/0H6A6016_edited.jpg",
   "/comunidad/0H6A5988.jpg",
 ];
@@ -26,7 +26,7 @@ export default function OtherTripsIntro({
           {/* Columna Izquierda */}
           <div
             data-intro-left
-            className="lg:block relative w-1/3 h-[72vh] mt-16 overflow-hidden shrink-0 will-change-transform z-1 bg-plum-900 border border-gold-400/20"
+            className="lg:block relative w-1/3 h-[72vh] mt-16 overflow-hidden shrink-0 will-change-transform z-1 bg-plum-900 "
           >
             {images[0] ? (
               <Image
@@ -48,7 +48,7 @@ export default function OtherTripsIntro({
           {/* Columna Central */}
           <div
             data-intro-center
-            className="relative w-full lg:w-1/3 h-full lg:h-[88vh] overflow-hidden shrink-0 will-change-transform z-2 flex items-center justify-center bg-plum-900 border border-gold-400/30"
+            className="relative w-full lg:w-1/3 h-full lg:h-[88vh] overflow-hidden shrink-0 will-change-transform z-2 flex items-center justify-center bg-plum-900 "
           >
             {images[1] ? (
               <Image
@@ -78,7 +78,7 @@ export default function OtherTripsIntro({
           {/* Columna Derecha */}
           <div
             data-intro-right
-            className="lg:block relative w-1/3 h-[78vh] mt-8 overflow-hidden shrink-0 will-change-transform z-1 bg-plum-900 border border-gold-400/20"
+            className="lg:block relative w-1/3 h-[78vh] mt-8 overflow-hidden shrink-0 will-change-transform z-1 bg-plum-900"
           >
             {images[2] ? (
               <Image

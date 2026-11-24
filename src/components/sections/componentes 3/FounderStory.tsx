@@ -11,7 +11,7 @@ export interface FounderStoryProps {
 
 export default function FounderStory({
   id = "tamara",
-  eyebrow = "Conocé a Tamara",
+  eyebrow = "Conoce a Tamara",
   heading = "Una guía cercana en tu camino de regreso al alma.",
   description,
   image,

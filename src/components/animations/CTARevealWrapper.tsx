@@ -51,13 +51,13 @@ export default function CTARevealWrapper({
             return;
           }
 
-          // 1. Parallax suave en imagen de fondo (-10% a +10%)
+          // 1. Parallax suave en imagen de fondo (-6% a +6%) dentro de sangrado seguro
           if (bgImage) {
             gsap.fromTo(
               bgImage,
-              { yPercent: -10 },
+              { yPercent: -6 },
               {
-                yPercent: 10,
+                yPercent: 6,
                 ease: "none",
                 scrollTrigger: {
                   trigger: root,
@@ -101,26 +101,36 @@ export default function CTARevealWrapper({
       ref={sectionRef}
       className={`relative w-full min-h-[80vh] lg:h-screen overflow-hidden flex items-center justify-center text-center px-6 md:px-12 bg-plum-950 ${className}`}
     >
-      {/* Contenedor sobredimensionado para parallax sin corte */}
+      {/* Contenedor de imagen con sangrado vertical para absorber el parallax sin generar gaps */}
       <div
         data-cta-bg
-        className="absolute top-[10%] left-0 w-full h-[120%] pointer-events-none will-change-transform z-0"
+        className="absolute inset-x-0 -top-[15%] w-full h-[130%] pointer-events-none will-change-transform z-0"
       >
         {bgImageNode}
       </div>
 
-      {/* Overlay de contraste profundo y gradiente sutil */}
+      {/* 1. Capa base de tinte plum translúcido */}
       <div
-        className="absolute inset-0 bg-plum-950/75 lg:bg-plum-950/70 bg-linear-to-t from-plum-950 via-plum-950/40 to-plum-950 pointer-events-none z-10"
+        className="absolute inset-0 bg-linear-to-b from-plum-950/5 via-plum-950/10 to-plum-950/80 pointer-events-none z-10"
         aria-hidden="true"
       />
 
-      {/* Capa de Contenido Editorial */}
+      {/* 2. Viñeta radial para concentrar contraste en el texto sin tapar la foto comunitaria */}
+      <div
+        className="absolute inset-0 bg-radial-[at_50%_50%] from-plum-950/70 via-plum-950/50 to-plum-950/80 pointer-events-none z-10"
+        aria-hidden="true"
+      />
+
+      {/* 3. Suavizado en bordes superior e inferior */}
+      <div
+        className="absolute inset-0 bg-linear-to-b from-plum-950/40 via-transparent to-plum-950/60 pointer-events-none z-10"
+        aria-hidden="true"
+      />
+
       <div className="relative z-20 max-w-4xl mx-auto flex flex-col items-center text-center">
         {children}
       </div>
 
-      {/* Textura de grano tonal sutil */}
       <div
         className="absolute inset-0 opacity-[0.025] pointer-events-none bg-[url('/grain.png')] z-30"
         aria-hidden="true"

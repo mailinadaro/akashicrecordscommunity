@@ -59,9 +59,9 @@
      ========================================================== */
 
   /* Surfaces */
-  --color-surface-page: var(--color-gold-200);
-  --color-surface-secondary: var(--color-plum-200);
-  --color-surface-tertiary: var(--color-gold-300);
+  --color-surface-page: #ffffff;
+  --color-surface-secondary: #faf9f7;
+  --color-surface-tertiary: #f3f0ea;
 
   /* Text */
   --color-text-primary: var(--color-plum-950);
@@ -70,10 +70,15 @@
   /* Actions */
   --color-surface-action: var(--color-plum-950);
   --color-surface-action-hover: var(--color-gold-500);
-  --color-text-on-action: var(--color-gold-200);
+  --color-text-on-action: #ffffff;
+
+  /* Action Gold (Brand Primary Conversion) */
+  --color-surface-action-gold: var(--color-gold-500);
+  --color-surface-action-gold-hover: var(--color-gold-400);
+  --color-text-on-gold: var(--color-plum-950);
 
   /* Borders */
-  --color-border-default: var(--color-gold-400);
+  --color-border-default: rgba(148, 101, 51, 0.22);
   --color-border-focus: var(--color-gold-500);
 
   /* Icons */

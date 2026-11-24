@@ -34,6 +34,43 @@ export default function ItinerariesKinematicWrapper({
 
       mm.add("(min-width: 1024px)", () => {
         const cards = gsap.utils.toArray<HTMLElement>("[data-itinerary-card]", root);
+        const labels = gsap.utils.toArray<HTMLElement>("[data-season-label]", root);
+
+        const updateSeasonActive = (activeKey: string) => {
+          labels.forEach((el) => {
+            const key = el.getAttribute("data-season-label");
+            const isActive = key === activeKey;
+            gsap.to(el, {
+              opacity: isActive ? 1 : 0.35,
+              x: isActive ? 8 : 0,
+              duration: 0.3,
+              overwrite: "auto",
+            });
+            const titleEl = el.querySelector<HTMLElement>("[data-season-title]");
+            if (titleEl) {
+              gsap.to(titleEl, {
+                color: isActive ? "#331e45" : "#735d8b",
+                fontWeight: isActive ? "600" : "400",
+                duration: 0.3,
+                overwrite: "auto",
+              });
+            }
+          });
+        };
+
+        // Sincronización del sidebar mediante ScrollTrigger en cada tarjeta al 50% del viewport
+        cards.forEach((card, index) => {
+          const seasonKey = card.getAttribute("data-season-key");
+          if (!seasonKey) return;
+
+          ScrollTrigger.create({
+            trigger: card,
+            start: index === 0 ? "top 80%" : "top 50%",
+            end: "bottom 50%",
+            onEnter: () => updateSeasonActive(seasonKey),
+            onEnterBack: () => updateSeasonActive(seasonKey),
+          });
+        });
 
         // Fade out total de los textos cuando la tarjeta siguiente comienza a solaparla
         cards.forEach((card, index) => {
@@ -45,11 +82,11 @@ export default function ItinerariesKinematicWrapper({
 
           gsap.to(textLayer.children, {
             opacity: 0,
-            y: -25,
+            y: -30,
             ease: "none",
             scrollTrigger: {
               trigger: nextCard,
-              start: "top 85%",
+              start: "top 90%",
               end: "top 25%",
               scrub: true,
             },

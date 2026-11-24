@@ -20,7 +20,7 @@ export default function SplitContentWrapper({
   id,
   className = "",
 }: SplitContentWrapperProps) {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -39,17 +39,17 @@ export default function SplitContentWrapper({
       mm.add("(min-width: 1024px)", () => {
         // Le damos un scale sutil para tener margen de recorrido vertical sin bordes vacíos
         gsap.set(imgTarget, {
-          scale: 1.15,
+          scale: 1.05,
           transformOrigin: "center center",
           willChange: "transform",
         });
 
-        // Parallax notable: viaja de -60px a +60px vinculado estrictamente al scrub del scroll
+        // Parallax notable: viaja de -25px a +25px vinculado estrictamente al scrub del scroll
         gsap.fromTo(
           imgTarget,
-          { y: -60 },
+          { y: -25 },
           {
-            y: 60,
+            y: 25,
             ease: "none",
             scrollTrigger: {
               trigger: root,
@@ -68,8 +68,8 @@ export default function SplitContentWrapper({
   );
 
   return (
-    <section ref={sectionRef} id={id} className={className}>
+    <div ref={sectionRef} id={id} className={`w-full ${className}`}>
       {children}
-    </section>
+    </div>
   );
 }

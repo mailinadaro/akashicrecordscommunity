@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import Footer from "@/components/sections/globales/Footer";
+import FloatingWhatsApp from "@/components/sections/globales/FloatingWhatsApp";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import GSAPRouteWatcher from "@/components/providers/GSAPRouteWatcher";
 import "./globals.css";
@@ -79,6 +80,7 @@ export default function RootLayout({
             </main>
           </div>
           <Footer />
+          <FloatingWhatsApp />
         </SmoothScrollProvider>
       </body>
     </html>

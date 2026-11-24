@@ -35,7 +35,8 @@ export type AnalyticsClickLocation =
   | 'hero'
   | 'investment_section'
   | 'final_cta'
-  | 'about_cta';
+  | 'about_cta'
+  | 'floating_whatsapp';
 
 export interface BaseAnalyticsPayload {
   readonly adaro_container_scope: AdaroContainerScope;

@@ -88,7 +88,7 @@ export default function Footer() {
   const emailHref = `mailto:${siteConfig.contact.email}`;
 
   return (
-    <footer className="relative z-20 w-full bg-plum-950 border-t border-gold-400/20 py-12 sm:py-14 px-6 font-body text-gold-200">
+    <footer className="relative z-20 w-full bg-plum-950 py-12 sm:py-14 px-6 font-body text-gold-200">
       <div className="max-w-2xl mx-auto flex flex-col items-center justify-center text-center gap-3 sm:gap-4">
         {/* 1. Logo de Akashic */}
         <Link
@@ -149,7 +149,7 @@ export default function Footer() {
 
         {/* 3. Derechos reservados */}
         <p className="font-sans text-xs sm:text-sm text-gold-200/80 tracking-wide font-light">
-          Akashic Record Community @ 2016 Todos los derechos reservados
+          Akashic Record Community @ 2026 Todos los derechos reservados
         </p>
 
         {/* 4. Soporte y email */}

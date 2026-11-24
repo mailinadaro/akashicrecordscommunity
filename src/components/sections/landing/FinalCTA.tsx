@@ -1,4 +1,4 @@
-import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import CTARevealWrapper from "@/components/animations/CTARevealWrapper";
@@ -25,7 +25,7 @@ export default function FinalCTA({
   buttonHref = siteConfig.bookingUrl,
   secondaryButtonLabel = "Consultar por WhatsApp",
   secondaryButtonHref = siteConfig.contact.whatsapp,
-  bgImage = "/comunidad/0H6A5767.jpg",
+  bgImage = "/comunidad/0H6A9602.jpg",
   className = "",
 }: FinalCTAProps) {
   const BackgroundNode = bgImage ? (
@@ -46,15 +46,14 @@ export default function FinalCTA({
       {tagline && (
         <span
           data-cta-reveal
-          className="text-[11px] font-sans uppercase tracking-[0.3em] text-gold-400 mb-4 block select-none font-semibold drop-shadow-sm"
+          className="text-[11px] font-sans uppercase tracking-[0.28em] text-gold-300 mb-6 inline-block font-semibold bg-plum-950/70 px-5 py-2 border border-gold-400/40 rounded-full backdrop-blur-xs shadow-md select-none"
         >
           {tagline}
         </span>
       )}
-
       <h2
         data-cta-reveal
-        className="text-3xl sm:text-5xl md:text-6xl font-display italic tracking-tight text-gold-200 leading-tight drop-shadow-md max-w-3xl"
+        className="text-3xl sm:text-5xl md:text-6xl font-display italic tracking-tight text-gold-200 leading-[1.15] drop-shadow-md max-w-3xl"
       >
         {title}
       </h2>
@@ -62,13 +61,13 @@ export default function FinalCTA({
       {subtitle && (
         <p
           data-cta-reveal
-          className="mt-6 max-w-xl text-base sm:text-lg text-gold-200/80 font-body font-light leading-relaxed"
+          className="mt-6 max-w-2xl text-base sm:text-lg text-gold-200/80 font-body font-light leading-relaxed drop-shadow-sm"
         >
           {subtitle}
         </p>
       )}
 
-      <div data-cta-reveal className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+      <div data-cta-reveal className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
         {buttonLabel && buttonHref && (
           <Link
             href={buttonHref}
@@ -78,9 +77,9 @@ export default function FinalCTA({
             className="w-full sm:w-auto"
           >
             <Button
-              variant="outline"
-              size="default"
-              className="w-full sm:w-auto px-8 py-4 h-auto text-xs font-sans font-semibold tracking-widest uppercase bg-gold-500 text-plum-950 hover:bg-gold-400 border-none transition-all duration-300 shadow-xl gap-2 cursor-pointer"
+              variant="gold"
+              size="lg"
+              className="w-full sm:w-auto cursor-pointer hover:scale-102 gap-2"
             >
               <span>{buttonLabel}</span>
               <span aria-hidden="true">→</span>
@@ -97,9 +96,9 @@ export default function FinalCTA({
             className="w-full sm:w-auto"
           >
             <Button
-              variant="outline"
-              size="default"
-              className="w-full sm:w-auto px-8 py-4 h-auto text-xs font-sans font-medium tracking-widest uppercase border border-gold-400/40 text-gold-200 hover:border-gold-300 transition-all duration-300 bg-transparent cursor-pointer"
+              variant="outline-gold"
+              size="lg"
+              className="w-full sm:w-auto cursor-pointer hover:scale-102"
             >
               <span>{secondaryButtonLabel}</span>
             </Button>

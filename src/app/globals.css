@@ -37,6 +37,10 @@
   --color-surface-action-hover: var(--color-surface-action-hover);
   --color-text-on-action: var(--color-text-on-action);
 
+  --color-surface-action-gold: var(--color-surface-action-gold);
+  --color-surface-action-gold-hover: var(--color-surface-action-gold-hover);
+  --color-text-on-gold: var(--color-text-on-gold);
+
   --color-border-default: var(--color-border-default);
   --color-border-focus: var(--color-border-focus);
 
