@@ -20,8 +20,8 @@ export default function RegistrationProgressBar({
       className={`w-full max-w-lg mx-auto rounded-2xl border border-gold-400/30 bg-plum-950/80 px-4 py-3 sm:px-5 sm:py-3.5 shadow-inner ${className}`}
     >
       <div className="flex items-center justify-between gap-2 text-xs sm:text-sm font-sans mb-2">
-        <span className="font-medium text-gold-200">{label}</span>
-        <span className="font-bold text-gold-300 tabular-nums">{clamped}%</span>
+        <span className="font-semibold text-[#F7E3C6] lg:text-gold-200">{label}</span>
+        <span className="font-bold text-[#FCE8CA] lg:text-gold-300 tabular-nums">{clamped}%</span>
       </div>
 
       <div
@@ -38,7 +38,7 @@ export default function RegistrationProgressBar({
         />
       </div>
 
-      <p className="mt-2 text-[11px] sm:text-xs font-body text-gold-200/85 text-center">
+      <p className="mt-2 text-[11px] sm:text-xs font-body text-[#F5D7AD] lg:text-gold-200/90 font-medium lg:font-normal text-center">
         {helperText}
       </p>
     </div>

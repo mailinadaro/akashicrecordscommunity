@@ -159,14 +159,14 @@ export default function EntreDosCiclosThankYou({
 
             {/* Cierre cálido y soporte mínimo sin distracciones */}
             <div className="pt-4 border-t border-gold-400/20 text-center space-y-1.5">
-              <p className="font-display italic text-lg sm:text-xl text-gold-200 font-light">
+              <p className="font-display italic text-lg sm:text-xl text-[#F7E3C6] lg:text-gold-200 font-normal lg:font-light">
                 Una vez dentro del Grupo, tu lugar quedará 100% confirmado. ¡Nos vemos pronto!
               </p>
-              <p className="font-body text-xs text-white/70">
+              <p className="font-body text-xs text-white/80">
                 ¿Dudas con tu registro? Escríbenos a{" "}
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-gold-300 hover:text-gold-100 underline underline-offset-4 decoration-gold-400/40 transition-colors"
+                  className="text-[#F5D7AD] lg:text-gold-300 hover:text-gold-100 underline underline-offset-4 decoration-gold-400/50 transition-colors"
                 >
                   {siteConfig.contact.email}
                 </a>

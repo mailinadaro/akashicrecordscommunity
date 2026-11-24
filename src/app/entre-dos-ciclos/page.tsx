@@ -9,9 +9,9 @@ export default function EntreDosCiclosPage() {
     "/entre%20ciclos/Screenshot_2026-11-20_175636.png_b58ab2ce_2K.jpg";
 
   return (
-    <div className="relative flex flex-col justify-between items-center w-full min-h-full px-4 py-3 sm:py-4 lg:py-2 lg:px-8">
-      {/* 1. Fondo Multimedia: Video Cinemático con Velo Lúcido y Tenue */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+    <div className="relative flex flex-col justify-between items-center w-full min-h-full px-3.5 py-3 sm:px-5 sm:py-4 lg:py-2 lg:px-8 bg-gradient-to-b from-[#1a0824] via-plum-950 to-[#180722] lg:bg-none">
+      {/* 1. Fondo Multimedia en Desktop (en mobile el video vive en la cabecera visual superior) */}
+      <div className="hidden lg:block absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video
           autoPlay
           loop
