@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Sparkles, BookOpen, Heart, Eye, Sparkle, RefreshCw, Compass } from "lucide-react";
-import { TwentyOneDaysKinematicWrapper } from "@/components/animations/TwentyOneDaysKinematicWrapper";
+import { ScrollytellingCanvasWrapper } from "@/components/animations/ScrollytellingCanvasWrapper";
+import gifFrames3 from "@/data/gifFrames3.json";
 
 /* =========================================================================
    DATOS DECLARATIVOS (ESPAÑOL NEUTRO PARA MÉXICO · 5 EJES DE PRÁCTICA)
@@ -22,7 +22,7 @@ const PRACTICE_PILLARS: PracticePillar[] = [
     id: "pillar-conexion",
     numeral: "01",
     name: "Conexión",
-    action: "Preparar tu espacio y conectar",
+    action: "Preparar tu espacio y altar",
     description: "Dedicar momentos a conectar contigo misma, crear tu espacio sagrado y consagrar tu altar personal.",
     IconComponent: Heart,
   },
@@ -31,7 +31,7 @@ const PRACTICE_PILLARS: PracticePillar[] = [
     numeral: "02",
     name: "Percepción",
     action: "Reconocer cómo recibes información",
-    description: "Explorar tus propios canales sutiles de percepción y familiarizarte con tu forma única de recibir mensajes.",
+    description: "Explorar tus canales sutiles y familiarizarte con tu forma única de percibir mensajes.",
     IconComponent: Eye,
   },
   {
@@ -39,7 +39,7 @@ const PRACTICE_PILLARS: PracticePillar[] = [
     numeral: "03",
     name: "Práctica",
     action: "Aplicar las herramientas aprendidas",
-    description: "Llevar a la experiencia cotidiana los pasos, oraciones sagradas y métodos adquiridos durante los encuentros.",
+    description: "Llevar a la experiencia cotidiana los pasos, oraciones sagradas y métodos adquiridos.",
     IconComponent: Sparkle,
   },
   {
@@ -47,7 +47,7 @@ const PRACTICE_PILLARS: PracticePillar[] = [
     numeral: "04",
     name: "Integración",
     action: "Registrar tus experiencias",
-    description: "Escribir en tu bitácora lo que experimentas, observar tus aprendizajes y relacionarlos con tu camino personal.",
+    description: "Escribir en tu bitácora lo que experimentas, observar tus avances y relacionarlos con tu camino.",
     IconComponent: BookOpen,
   },
   {
@@ -55,13 +55,13 @@ const PRACTICE_PILLARS: PracticePillar[] = [
     numeral: "05",
     name: "Continuidad",
     action: "Construir una rutina propia",
-    description: "Establecer un hábito espiritual consciente, sereno y sostenible que perdure mucho más allá de las tres semanas.",
+    description: "Establecer un hábito espiritual consciente, sereno y sostenible que perdure en el tiempo.",
     IconComponent: RefreshCw,
   },
 ];
 
 /* =========================================================================
-   COMPONENTE PRINCIPAL (RSC: SERVER COMPONENT PURO CON WRAPPER CINEMÁTICO)
+   COMPONENTE PRINCIPAL (SCROLLYTELLING UNIFICADO CON GIFF 3 · 300 FOTOGRAMAS)
    ========================================================================= */
 
 export default function TwentyOneDaysPracticeSection({
@@ -72,297 +72,182 @@ export default function TwentyOneDaysPracticeSection({
   className?: string;
 }) {
   return (
-    <TwentyOneDaysKinematicWrapper>
-      <section
-        id={id}
-        data-practice-section
-        aria-label="Los 21 días de práctica: Bitácora de Integración"
-        className={`relative w-full bg-[#FAF7F1] py-20 sm:py-28 lg:py-32 overflow-hidden border-b border-[#E3DAC9] ${className}`}
+    <section
+      id={id}
+      aria-label="Los 21 días de práctica: Bitácora de Integración"
+      className={`relative w-full bg-[#FAF7F1] overflow-x-clip overflow-y-visible border-b border-[#E3DAC9] ${className}`}
+    >
+      {/* 1. MOTOR DE SCROLLYTELLING CONTEXTUAL Y COMPACTO (h-[260vh] para evitar gaps muertos) */}
+      <ScrollytellingCanvasWrapper
+        folder="giff 3"
+        frames={gifFrames3}
+        theme="light"
+        scrollHeight="h-[260vh]"
       >
-        {/* 1. TEXTURA DE FONDO REAL DE PAPEL ARTESANAL */}
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-25 mix-blend-multiply">
-          <Image
-            src="/texturas/1.png"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            priority={false}
-          />
-        </div>
+        <div className="relative w-full h-full flex items-center justify-center pointer-events-auto">
+          <div className="grid grid-cols-1 grid-rows-1 items-center justify-center w-full max-w-4xl mx-auto px-4 sm:px-6">
 
-        {/* 2. MARCAS DE AGUA EDITORIALES */}
-        <div
-          className="absolute top-1/4 -right-20 w-80 h-80 z-0 pointer-events-none opacity-10 blur-[0.5px]"
-          aria-hidden="true"
-        >
-          <Image
-            src="/grabados antiguos/vector mano y pluma.png"
-            alt=""
-            width={320}
-            height={320}
-            className="object-contain"
-          />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-12 xl:px-16">
-          
-          {/* ENCABEZADO EDITORIAL CONTEXTUAL */}
-          <div data-practice-header className="mx-auto max-w-3xl text-center mb-16 lg:mb-20">
-            <div className="inline-block mb-3.5">
-              <span className="inline-flex items-center gap-2 bg-[#EFE8DC] border border-[#D8CCBA] px-4 py-1.5 rounded-sm shadow-xs font-mono text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#6B5A47]">
-                <Sparkles className="w-3 h-3 text-[#8C7355]" />
-                SECCIÓN 06 · LA PRÁCTICA COTIDIANA
-              </span>
-            </div>
-
-            <h2 className="font-display italic text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] text-[#26211E] font-normal leading-[1.18] tracking-tight mb-4">
-              21 días para llevar lo aprendido a tu propia experiencia
-            </h2>
-
-            <p className="font-display italic text-lg sm:text-xl text-[#7A5B1E] font-medium mb-4">
-              «La conexión se aprende. La confianza se construye practicando.»
-            </p>
-
-            <p className="font-body text-sm sm:text-base leading-relaxed text-[#5A4F44] font-light max-w-2xl mx-auto mb-5">
-              Entre los encuentros en vivo vas a contar con un espacio para explorar, experimentar e integrar lo que aprendiste.
-              A través de la Bitácora de Integración, contarás con ejercicios diarios para profundizar tu conexión con los Registros Akáshicos.
-            </p>
-
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DF] border border-[#DDD3C2] text-xs font-sans text-[#6B5A47]">
-              <span className="w-2 h-2 rounded-full bg-[#8C7355]" />
-              <span><strong>Recorrido asincrónico:</strong> avanzas a tu propio ritmo, sin encuentros en vivo adicionales todos los días.</span>
-            </div>
-          </div>
-
-          {/* COMPOSICIÓN EN DOS COLUMNAS: MOCKUP A LA IZQUIERDA + EJES A LA DERECHA */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-16 lg:mb-24">
-            
-            {/* COLUMNA IZQUIERDA: MOCKUP DE LA BITÁCORA ABIERTA (6 Columnas en Desktop) */}
-            <div className="lg:col-span-6 flex flex-col items-center">
-              <div
-                data-journal-mockup
-                className="relative w-full rounded-sm overflow-hidden bg-[#FFFDF9] border border-[#DDD3C2] p-3 sm:p-4 shadow-2xl shadow-[#26211E]/10 transition-transform duration-300"
-              >
-                {/* Imagen del Mockup de la Bitácora Abierta */}
-                <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-xs bg-[#F5F1E8]">
-                  <Image
-                    src="/grabados antiguos/Copia de Dossier Alma Adentro 2025.png"
-                    alt="Mockup de la Bitácora de Integración abierta con ejercicios y páginas de registro"
-                    fill
-                    sizes="(min-width: 1024px) 45vw, 100vw"
-                    className="object-cover object-center"
-                    priority={false}
-                  />
-                </div>
-
-                {/* Sello de formato y detalle editorial */}
-                <div className="pt-4 pb-2 px-2 flex items-center justify-between border-t border-[#EDE4D5] mt-3">
-                  <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-[#7A6B5B] font-semibold">
-                    ✦ Formato Digital e Imprimible
-                  </span>
-                  <span className="font-sans text-xs text-[#8C7355] font-medium">
-                    Ejercicios guiados
+            {/* ACTO 1: Apertura & Filosofía (Visible 0% - 25% del scroll) */}
+            <div
+              data-scrolly-act="1"
+              className="col-start-1 row-start-1 flex flex-col items-center justify-center text-center py-6"
+            >
+              <div className="bg-[#FFFDF8]/92 backdrop-blur-md border border-[#DDD3C2] p-7 sm:p-9 rounded-sm shadow-xl shadow-[#26211E]/8 max-w-2xl mx-auto">
+                <div className="inline-block mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EFE8DC]/90 border border-[#D8CCBA] text-[#6B5A47] font-mono text-[11px] uppercase tracking-[0.22em] font-semibold shadow-xs">
+                    <Sparkles className="w-3 h-3 text-[#8C7355]" />
+                    SECCIÓN 06 · LA PRÁCTICA COTIDIANA
                   </span>
                 </div>
-              </div>
 
-              {/* Mensaje de la compañera de viaje */}
-              <div className="mt-6 text-center max-w-md">
-                <h3 className="font-display italic text-lg sm:text-xl text-[#26211E] font-medium mb-2">
-                  Tu compañera durante el recorrido: la Bitácora
-                </h3>
-                <p className="font-body text-xs sm:text-sm text-[#615447] font-light leading-relaxed">
-                  Un espacio íntimo para escribir, registrar tus experiencias, observar tus avances y darle lugar a todo lo que vaya surgiendo durante la práctica.
+                <h2 className="font-display italic text-2xl sm:text-3xl md:text-4xl text-[#26211E] font-normal leading-[1.18] tracking-tight mb-3">
+                  21 días para llevar lo aprendido a tu propia experiencia
+                </h2>
+
+                <p className="font-display italic text-base sm:text-lg text-[#7A5B1E] font-medium mb-3">
+                  «La conexión se aprende. La confianza se construye practicando.»
                 </p>
+
+                <p className="font-body text-xs sm:text-sm leading-relaxed text-[#5A4F44] font-light mb-5">
+                  Entre los encuentros en vivo vas a contar con un espacio asincrónico para explorar, experimentar e integrar a tu propio ritmo, sin clases diarias adicionales.
+                </p>
+
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DF]/90 border border-[#DDD3C2] text-xs font-sans text-[#6B5A47] shadow-xs">
+                  <span className="w-2 h-2 rounded-full bg-[#8C7355]" />
+                  <span><strong>Recorrido asincrónico:</strong> avanzas a tu ritmo sin encuentros adicionales.</span>
+                </div>
+
+                <div className="mt-6 text-[10px] font-mono text-[#8C7355] tracking-widest uppercase flex items-center justify-center gap-1.5">
+                  <span>Haz scroll para abrir la bitácora</span>
+                  <span className="animate-bounce">↓</span>
+                </div>
               </div>
             </div>
 
-            {/* COLUMNA DERECHA: LOS 5 EJES DE TRABAJO (6 Columnas en Desktop) */}
-            <div className="lg:col-span-6 flex flex-col gap-4 sm:gap-4.5">
-              <div className="mb-2">
-                <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#7A6B5B] block mb-1">
+            {/* ACTO 2: Los 5 Ejes de Trabajo (Visible 30% - 65% del scroll) */}
+            <div
+              data-scrolly-act="2"
+              className="col-start-1 row-start-1 flex flex-col items-center justify-center text-center py-6"
+            >
+              <div className="inline-block bg-[#FFFDF8]/90 backdrop-blur-md px-5 py-1.5 rounded-full border border-[#DDD3C2] shadow-sm mb-4">
+                <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-[#7A6B5B] block font-semibold">
                   ✦ CINCO EJES FUNDAMENTALES ✦
                 </span>
-                <h3 className="font-display italic text-2xl sm:text-3xl text-[#26211E] font-medium leading-snug">
+              </div>
+
+              <div className="inline-block bg-[#FFFDF8]/90 backdrop-blur-md px-6 py-2 rounded-full border border-[#DDD3C2] shadow-sm mb-6">
+                <h3 className="font-display italic text-xl sm:text-2xl md:text-3xl text-[#26211E] font-medium leading-none">
                   Lo que vas a trabajar en estos 21 días
                 </h3>
               </div>
 
-              {PRACTICE_PILLARS.map((pillar) => {
-                const Icon = pillar.IconComponent;
-                return (
-                  <article
-                    key={pillar.id}
-                    data-practice-pillar
-                    className="relative bg-[#FFFDF9] border border-[#E3DAC9] p-4.5 sm:p-5 rounded-sm shadow-xs shadow-[#26211E]/5 transition-all flex items-start gap-4 hover:border-[#8C7355]/40"
-                  >
-                    <div className="shrink-0 w-10 h-10 rounded-sm bg-[#F6F1E6] border border-[#DFD5C3] flex items-center justify-center text-[#7A5B1E] mt-0.5">
-                      <Icon className="w-4 h-4" />
-                    </div>
-
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-baseline justify-between gap-2 mb-1">
-                        <h4 className="font-display italic text-lg text-[#26211E] font-medium leading-none">
-                          {pillar.name}
-                        </h4>
-                        <span className="font-mono text-[10px] text-[#8C7355] font-semibold uppercase tracking-wider">
-                          {pillar.numeral}
-                        </span>
+              {/* Grid Compacta de los 5 Pilares */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full max-w-3xl text-left mb-4">
+                {PRACTICE_PILLARS.map((pillar) => {
+                  const Icon = pillar.IconComponent;
+                  return (
+                    <article
+                      key={pillar.id}
+                      className="bg-[#FFFDF9]/95 backdrop-blur-md border border-[#E3DAC9] p-3.5 rounded-sm shadow-sm flex items-start gap-3"
+                    >
+                      <div className="shrink-0 w-8 h-8 rounded-sm bg-[#F6F1E6] border border-[#DFD5C3] flex items-center justify-center text-[#7A5B1E] mt-0.5">
+                        <Icon className="w-3.5 h-3.5" />
                       </div>
+                      <div className="min-w-0">
+                        <div className="flex items-baseline justify-between gap-1 mb-0.5">
+                          <h4 className="font-display italic text-base text-[#26211E] font-medium">
+                            {pillar.name}
+                          </h4>
+                          <span className="font-mono text-[9px] text-[#8C7355] font-semibold">
+                            {pillar.numeral}
+                          </span>
+                        </div>
+                        <p className="font-sans text-[11px] text-[#7A5B1E] font-semibold mb-0.5 leading-tight">
+                          {pillar.action}
+                        </p>
+                        <p className="font-body text-[11px] text-[#5A4F44] font-light leading-snug">
+                          {pillar.description}
+                        </p>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
 
-                      <p className="font-sans text-xs text-[#7A5B1E] font-semibold mb-1">
-                        {pillar.action}
-                      </p>
-
-                      <p className="font-body text-xs text-[#5A4F44] font-light leading-relaxed">
-                        {pillar.description}
-                      </p>
-                    </div>
-                  </article>
-                );
-              })}
+              <div className="inline-block bg-[#FFFDF8]/90 backdrop-blur-md px-4 py-1 rounded-full border border-[#DDD3C2] text-[10px] font-mono text-[#8C7355] tracking-widest uppercase flex items-center justify-center gap-1.5 mx-auto">
+                <span>Continúa explorando la bitácora</span>
+                <span className="animate-bounce">↓</span>
+              </div>
             </div>
 
-          </div>
+            {/* ACTO 3: La Bitácora & Fases de Recorrido (Visible 70% - 100% del scroll) */}
+            <div
+              data-scrolly-act="3"
+              className="col-start-1 row-start-1 flex flex-col items-center justify-center text-center py-6"
+            >
+              <div className="bg-[#FFFDF8]/92 backdrop-blur-md border border-[#DDD3C2] p-7 sm:p-9 rounded-sm shadow-xl shadow-[#26211E]/8 max-w-2xl mx-auto">
+                <div className="inline-block mb-2">
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EFE8DC]/90 border border-[#D8CCBA] text-[#6B5A47] font-mono text-[11px] uppercase tracking-[0.22em] font-semibold shadow-xs">
+                    ✦ FORMATO DIGITAL E IMPRIMIBLE ✦
+                  </span>
+                </div>
 
-          {/* CINTA VISUAL CONCEPTUAL DE LOS 21 DÍAS (El Calendario de Continuidad) */}
-          <div
-            data-calendar-ribbon
-            className="relative mx-auto max-w-5xl bg-[#FFFDF8] border border-[#DDD3C2] p-7 sm:p-9 lg:p-10 rounded-sm shadow-xl shadow-[#26211E]/6"
-          >
-            {/* Encabezado del calendario conceptual */}
-            <div className="text-center mb-8 border-b border-[#EDE4D5] pb-5">
-              <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#7A6B5B] block mb-1.5">
-                ✦ CONTINUIDAD DEL PROCESO ✦
-              </span>
-              <h3 className="font-display italic text-2xl sm:text-3xl text-[#26211E] font-normal leading-snug">
-                El ritmo de tu práctica durante las tres semanas
-              </h3>
-              <p className="font-body text-xs sm:text-sm text-[#615447] font-light max-w-xl mx-auto mt-2">
-                Un avance progresivo dividido en tres momentos formativos, sin exigencias diarias rígidas.
-              </p>
-            </div>
+                <h3 className="font-display italic text-2xl sm:text-3xl text-[#26211E] font-normal leading-tight mb-2.5">
+                  Tu compañera durante el recorrido: la Bitácora de Integración
+                </h3>
 
-            {/* 3 FASES FORMATIVAS CON INDICADORES DÍA A DÍA */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-8">
-              
-              {/* FASE 1: DÍAS 1 AL 7 */}
-              <div className="bg-[#FAF5EA] border border-[#E3DAC9] p-5 rounded-sm flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-3 border-b border-[#E8DFC8] pb-2">
-                    <span className="font-mono text-[11px] font-bold text-[#7A5B1E] uppercase tracking-wider">
+                <p className="font-body text-xs sm:text-sm text-[#5A4F44] font-light max-w-xl mx-auto leading-relaxed mb-4">
+                  Vas a recibir una bitácora digital e imprimible con ejercicios diarios para acompañar tu proceso. Un espacio íntimo para escribir, registrar tus experiencias y avances.
+                </p>
+
+                {/* Síntesis Visual de las 3 Semanas */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 w-full mb-4 text-left">
+                  <div className="bg-[#FAF5EA] border border-[#E3DAC9] p-2.5 rounded-xs">
+                    <span className="font-mono text-[9px] text-[#7A5B1E] font-bold block uppercase mb-0.5">
                       Días 01 – 07
                     </span>
-                    <span className="font-sans text-[11px] font-semibold text-[#8C7355] uppercase">
-                      Semana 1
-                    </span>
+                    <h4 className="font-display italic text-xs text-[#26211E] font-medium">
+                      Conectar
+                    </h4>
+                    <p className="font-body text-[10px] text-[#615447] font-light">
+                      Altar y sintonización inicial.
+                    </p>
                   </div>
-                  <h4 className="font-display italic text-xl text-[#26211E] font-medium mb-1.5">
-                    Conectar
-                  </h4>
-                  <p className="font-body text-xs text-[#5A4D40] font-light leading-relaxed mb-4">
-                    Preparación del espacio sagrado, consagración de tu altar personal y primeros ejercicios de sintonización con tus Guías.
-                  </p>
-                </div>
-                <div className="flex items-center gap-1.5 pt-2 border-t border-[#E8DFC8]">
-                  {[1, 2, 3, 4, 5, 6, 7].map((d) => (
-                    <span
-                      key={d}
-                      className="flex-1 py-1 text-center font-mono text-[10px] bg-[#FFFDF9] border border-[#DDD3C2] text-[#6B5A47] rounded-2xs"
-                    >
-                      {d}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* FASE 2: DÍAS 8 AL 14 */}
-              <div className="bg-[#FAF5EA] border border-[#E3DAC9] p-5 rounded-sm flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-3 border-b border-[#E8DFC8] pb-2">
-                    <span className="font-mono text-[11px] font-bold text-[#7A5B1E] uppercase tracking-wider">
+                  <div className="bg-[#FAF5EA] border border-[#E3DAC9] p-2.5 rounded-xs">
+                    <span className="font-mono text-[9px] text-[#7A5B1E] font-bold block uppercase mb-0.5">
                       Días 08 – 14
                     </span>
-                    <span className="font-sans text-[11px] font-semibold text-[#8C7355] uppercase">
-                      Semana 2
-                    </span>
+                    <h4 className="font-display italic text-xs text-[#26211E] font-medium">
+                      Explorar
+                    </h4>
+                    <p className="font-body text-[10px] text-[#615447] font-light">
+                      Percepción y oración sagrada.
+                    </p>
                   </div>
-                  <h4 className="font-display italic text-xl text-[#26211E] font-medium mb-1.5">
-                    Explorar
-                  </h4>
-                  <p className="font-body text-xs text-[#5A4D40] font-light leading-relaxed mb-4">
-                    Práctica con la oración sagrada, calibración de tus sentidos de percepción y ejercicios guiados de canalización.
-                  </p>
-                </div>
-                <div className="flex items-center gap-1.5 pt-2 border-t border-[#E8DFC8]">
-                  {[8, 9, 10, 11, 12, 13, 14].map((d) => (
-                    <span
-                      key={d}
-                      className="flex-1 py-1 text-center font-mono text-[10px] bg-[#FFFDF9] border border-[#DDD3C2] text-[#6B5A47] rounded-2xs"
-                    >
-                      {d}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* FASE 3: DÍAS 15 AL 21 */}
-              <div className="bg-[#FAF5EA] border border-[#E3DAC9] p-5 rounded-sm flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-3 border-b border-[#E8DFC8] pb-2">
-                    <span className="font-mono text-[11px] font-bold text-[#7A5B1E] uppercase tracking-wider">
+                  <div className="bg-[#FAF5EA] border border-[#E3DAC9] p-2.5 rounded-xs">
+                    <span className="font-mono text-[9px] text-[#7A5B1E] font-bold block uppercase mb-0.5">
                       Días 15 – 21
                     </span>
-                    <span className="font-sans text-[11px] font-semibold text-[#8C7355] uppercase">
-                      Semana 3
-                    </span>
+                    <h4 className="font-display italic text-xs text-[#26211E] font-medium">
+                      Integrar
+                    </h4>
+                    <p className="font-body text-[10px] text-[#615447] font-light">
+                      Lecturas y rutina propia.
+                    </p>
                   </div>
-                  <h4 className="font-display italic text-xl text-[#26211E] font-medium mb-1.5">
-                    Integrar
-                  </h4>
-                  <p className="font-body text-xs text-[#5A4D40] font-light leading-relaxed mb-4">
-                    Realización de lecturas personales completas, formulación de preguntas y diseño de tu rutina espiritual propia.
-                  </p>
                 </div>
-                <div className="flex items-center gap-1.5 pt-2 border-t border-[#E8DFC8]">
-                  {[15, 16, 17, 18, 19, 20, 21].map((d) => (
-                    <span
-                      key={d}
-                      className="flex-1 py-1 text-center font-mono text-[10px] bg-[#FFFDF9] border border-[#DDD3C2] text-[#6B5A47] rounded-2xs"
-                    >
-                      {d}
-                    </span>
-                  ))}
-                </div>
+
+                <blockquote className="font-display italic text-xs sm:text-sm text-[#7A5B1E] max-w-md mx-auto leading-relaxed border-t border-[#DDD3C2] pt-2.5">
+                  «Porque aprender a abrir tus Registros es el comienzo. Darte el espacio para practicar es lo que te permite incorporar esta experiencia a tu camino.»
+                </blockquote>
               </div>
-
             </div>
 
-            {/* Cita de Cierre de la Bitácora */}
-            <div className="text-center pt-2">
-              <blockquote className="font-display italic text-base sm:text-lg text-[#26211E] max-w-2xl mx-auto leading-relaxed">
-                «Porque aprender a abrir tus Registros es el comienzo. Darte el espacio para practicar es lo que te permite incorporar esta experiencia a tu camino.»
-              </blockquote>
-            </div>
           </div>
-
         </div>
+      </ScrollytellingCanvasWrapper>
 
-        {/* TRANSICIÓN PAPER-TEAR INFERIOR */}
-        <div
-          className="absolute -bottom-3 left-0 w-full h-10 sm:h-14 z-30 pointer-events-none opacity-80"
-          aria-hidden="true"
-        >
-          <Image
-            src="/texturas/PNG_FONDO_TRANSPARENTE (1).png"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-bottom"
-          />
-        </div>
-      </section>
-    </TwentyOneDaysKinematicWrapper>
+      
+    </section>
   );
 }

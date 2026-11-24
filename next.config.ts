@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
         destination: "/iniciacion",
         permanent: false,
       },
+      {
+        source: "/entre-ciclos",
+        destination: "/entre-dos-ciclos",
+        permanent: true,
+      },
     ];
   },
 };

@@ -46,8 +46,8 @@ const DEFAULT_RESOURCES: ResourceItem[] = [
 ];
 
 export default function InstantResourcesGrid({
-  title = "¿Qué puedes ir explorando mientras llega enero?",
-  subtitle = "Dentro de Circle ya tienes disponibles tus primeros materiales preparatorios:",
+  title = "¿Qué materiales recibirás para tu preparación?",
+  subtitle = "A partir del 11 de enero de 2027 se habilitará tu acceso en Circle con estos materiales preparatorios:",
   resources = DEFAULT_RESOURCES,
   className = "",
 }: InstantResourcesGridProps) {
@@ -66,7 +66,7 @@ export default function InstantResourcesGrid({
     <section className={`w-full max-w-4xl mx-auto py-6 sm:py-8 px-4 ${className}`}>
       <div className="text-center mb-7">
         <span className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-gold-700 mb-2 block">
-          · Acceso Instantáneo ·
+          · Materiales de Preparación ·
         </span>
         <h3 className="font-display text-2xl sm:text-3xl text-plum-950 font-normal">
           {title}

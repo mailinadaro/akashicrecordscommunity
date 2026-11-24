@@ -112,7 +112,7 @@ export default function TimelineItinerary({
                   3 encuentros
                 </span>
                 <span className="inline-flex items-center px-2.5 py-1 rounded-xs bg-[#EFE8DC] border border-[#DDD3C2] text-[10px] font-mono uppercase tracking-wider text-[#6B5A47]">
-                  9 horas
+                  10 horas y 30 minutos
                 </span>
               </div>
 

@@ -26,9 +26,9 @@ const DEFAULT_SESSIONS: LiveSession[] = [
   {
     number: 1,
     title: "JORNADA 1 — RECORDAR Y CONECTAR",
-    subtitle: "Abrí el espacio para conectar con tu alma y tus Guías.",
+    subtitle: "Abre el espacio para conectar con tu alma y tus Guías.",
     date: "Sábado 16 de enero de 2027",
-    time: "10:00 a 13:00 h (México)",
+    time: "10:00 a 13:30 h (horario de México)",
     focus: "Conocerás qué son los Registros Akáshicos, la autonomía espiritual y el vínculo consciente con tus Maestros y Guías.",
     takeaways: [
       "Comprender qué son los Registros Akáshicos y cómo acceder a ellos.",
@@ -36,16 +36,16 @@ const DEFAULT_SESSIONS: LiveSession[] = [
       "Meditaciones guiadas y consagración de tu espacio sagrado y altar.",
     ],
     googleCalendarUrl:
-      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Iniciaci%C3%B3n+Ak%C3%A1shica+%E2%80%94+Jornada+1%3A+Recordar+y+Conectar&dates=20270116T160000Z/20270116T190000Z&details=Primer+encuentro+en+vivo+por+Zoom.+Acceso+y+enlace+centralizados+en+Circle.&location=Circle+%2F+Zoom",
+      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Iniciaci%C3%B3n+Ak%C3%A1shica+%E2%80%94+Jornada+1%3A+Recordar+y+Conectar&dates=20270116T160000Z/20270116T193000Z&details=Primer+encuentro+en+vivo+por+Zoom.+Acceso+y+enlace+centralizados+en+Circle.&location=Circle+%2F+Zoom",
     iCalDataUri:
-      "data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Iniciacion Akashica//Tamara Ciriza//ES%0ABEGIN:VEVENT%0AUID:iniciacion-jornada-1-20270116@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270116T160000Z%0ADTEND:20270116T190000Z%0ASUMMARY:Iniciación Akáshica — Jornada 1: Recordar y Conectar%0ADESCRIPTION:Primer encuentro sincrónico vía Zoom. Enlace disponible en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0AEND:VCALENDAR",
+      "data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Iniciacion Akashica//Tamara Ciriza//ES%0ABEGIN:VEVENT%0AUID:iniciacion-jornada-1-20270116@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270116T160000Z%0ADTEND:20270116T193000Z%0ASUMMARY:Iniciación Akáshica — Jornada 1: Recordar y Conectar%0ADESCRIPTION:Primer encuentro sincrónico vía Zoom. Enlace disponible en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0AEND:VCALENDAR",
   },
   {
     number: 2,
     title: "JORNADA 2 — ESCUCHAR Y CALIBRAR",
-    subtitle: "Aprendé a reconocer cómo recibís la información.",
+    subtitle: "Aprende a reconocer cómo recibes la información.",
     date: "Sábado 23 de enero de 2027",
-    time: "10:00 a 13:00 h (México)",
+    time: "10:00 a 13:30 h (horario de México)",
     focus: "Aprenderás el método de apertura y cierre, sintonización de tu canal y diferenciación entre intuición y ego.",
     takeaways: [
       "Oración sagrada de apertura, cierre y sintonización con el mantra ANAHIÚ.",
@@ -53,16 +53,16 @@ const DEFAULT_SESSIONS: LiveSession[] = [
       "Práctica de canalización guiada y tu primera lectura personal.",
     ],
     googleCalendarUrl:
-      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Iniciaci%C3%B3n+Ak%C3%A1shica+%E2%80%94+Jornada+2%3A+Escuchar+y+Calibrar&dates=20270123T160000Z/20270123T190000Z&details=Segundo+encuentro+en+vivo+por+Zoom.+Acceso+y+enlace+centralizados+en+Circle.&location=Circle+%2F+Zoom",
+      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Iniciaci%C3%B3n+Ak%C3%A1shica+%E2%80%94+Jornada+2%3A+Escuchar+y+Calibrar&dates=20270123T160000Z/20270123T193000Z&details=Segundo+encuentro+en+vivo+por+Zoom.+Acceso+y+enlace+centralizados+en+Circle.&location=Circle+%2F+Zoom",
     iCalDataUri:
-      "data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Iniciacion Akashica//Tamara Ciriza//ES%0ABEGIN:VEVENT%0AUID:iniciacion-jornada-2-20270123@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270123T160000Z%0ADTEND:20270123T190000Z%0ASUMMARY:Iniciación Akáshica — Jornada 2: Escuchar y Calibrar%0ADESCRIPTION:Segundo encuentro sincrónico vía Zoom. Enlace disponible en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0AEND:VCALENDAR",
+      "data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Iniciacion Akashica//Tamara Ciriza//ES%0ABEGIN:VEVENT%0AUID:iniciacion-jornada-2-20270123@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270123T160000Z%0ADTEND:20270123T193000Z%0ASUMMARY:Iniciación Akáshica — Jornada 2: Escuchar y Calibrar%0ADESCRIPTION:Segundo encuentro sincrónico vía Zoom. Enlace disponible en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0AEND:VCALENDAR",
   },
   {
     number: 3,
     title: "JORNADA 3 — INTEGRAR Y SOSTENER",
-    subtitle: "Transformá lo aprendido en una práctica propia.",
+    subtitle: "Transforma lo aprendido en una práctica propia.",
     date: "Sábado 30 de enero de 2027",
-    time: "10:00 a 13:00 h (México)",
+    time: "10:00 a 13:30 h (horario de México)",
     focus: "Profundizarás en formular preguntas profundas, interpretar revelaciones y diseñar tu mapa de práctica cotidiana.",
     takeaways: [
       "Formulación de preguntas profundas y decodificación de mensajes.",
@@ -70,14 +70,14 @@ const DEFAULT_SESSIONS: LiveSession[] = [
       "Diseño de tu rutina espiritual y Mapa de Práctica Espiritual propio.",
     ],
     googleCalendarUrl:
-      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Iniciaci%C3%B3n+Ak%C3%A1shica+%E2%80%94+Jornada+3%3A+Integrar+y+Sostener&dates=20270130T160000Z/20270130T190000Z&details=Tercer+encuentro+en+vivo+por+Zoom.+Acceso+y+enlace+centralizados+en+Circle.&location=Circle+%2F+Zoom",
+      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Iniciaci%C3%B3n+Ak%C3%A1shica+%E2%80%94+Jornada+3%3A+Integrar+y+Sostener&dates=20270130T160000Z/20270130T193000Z&details=Tercer+encuentro+en+vivo+por+Zoom.+Acceso+y+enlace+centralizados+en+Circle.&location=Circle+%2F+Zoom",
     iCalDataUri:
-      "data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Iniciacion Akashica//Tamara Ciriza//ES%0ABEGIN:VEVENT%0AUID:iniciacion-jornada-3-20270130@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270130T160000Z%0ADTEND:20270130T190000Z%0ASUMMARY:Iniciación Akáshica — Jornada 3: Integrar y Sostener%0ADESCRIPTION:Tercer encuentro sincrónico vía Zoom. Enlace disponible en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0AEND:VCALENDAR",
+      "data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Iniciacion Akashica//Tamara Ciriza//ES%0ABEGIN:VEVENT%0AUID:iniciacion-jornada-3-20270130@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270130T160000Z%0ADTEND:20270130T193000Z%0ASUMMARY:Iniciación Akáshica — Jornada 3: Integrar y Sostener%0ADESCRIPTION:Tercer encuentro sincrónico vía Zoom. Enlace disponible en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0AEND:VCALENDAR",
   },
 ];
 
-// iCal ICS Data URI con los 3 eventos en vivo de enero 2027 (10:00 a 13:00 h México = 16:00 a 19:00 UTC)
-const BULK_ICS_DATA_URI = `data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Iniciacion Akashica//Tamara Ciriza//ES%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:iniciacion-2027-01-16@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270116T160000Z%0ADTEND:20270116T190000Z%0ASUMMARY:Iniciación Akáshica — Jornada 1: Recordar y Conectar%0ADESCRIPTION:Primer encuentro sincrónico vía Zoom (10:00 a 13:00 h México). Enlace en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0ABEGIN:VEVENT%0AUID:iniciacion-2027-01-23@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270123T160000Z%0ADTEND:20270123T190000Z%0ASUMMARY:Iniciación Akáshica — Jornada 2: Escuchar y Calibrar%0ADESCRIPTION:Segundo encuentro sincrónico vía Zoom (10:00 a 13:00 h México). Enlace en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0ABEGIN:VEVENT%0AUID:iniciacion-2027-01-30@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270130T160000Z%0ADTEND:20270130T190000Z%0ASUMMARY:Iniciación Akáshica — Jornada 3: Integrar y Sostener%0ADESCRIPTION:Tercer encuentro sincrónico vía Zoom (10:00 a 13:00 h México). Enlace en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0AEND:VCALENDAR`;
+// iCal ICS Data URI con los 3 eventos en vivo de enero 2027 (10:00 a 13:30 h México = 16:00 a 19:30 UTC)
+const BULK_ICS_DATA_URI = `data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Iniciacion Akashica//Tamara Ciriza//ES%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:iniciacion-2027-01-16@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270116T160000Z%0ADTEND:20270116T193000Z%0ASUMMARY:Iniciación Akáshica — Jornada 1: Recordar y Conectar%0ADESCRIPTION:Primer encuentro sincrónico vía Zoom (10:00 a 13:30 h México). Enlace en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0ABEGIN:VEVENT%0AUID:iniciacion-2027-01-23@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270123T160000Z%0ADTEND:20270123T193000Z%0ASUMMARY:Iniciación Akáshica — Jornada 2: Escuchar y Calibrar%0ADESCRIPTION:Segundo encuentro sincrónico vía Zoom (10:00 a 13:30 h México). Enlace en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0ABEGIN:VEVENT%0AUID:iniciacion-2027-01-30@tamaraciriza.com%0ADTSTAMP:20261123T000000Z%0ADTSTART:20270130T160000Z%0ADTEND:20270130T193000Z%0ASUMMARY:Iniciación Akáshica — Jornada 3: Integrar y Sostener%0ADESCRIPTION:Tercer encuentro sincrónico vía Zoom (10:00 a 13:30 h México). Enlace en Circle.%0ALOCATION:Circle / Zoom%0ASTATUS:CONFIRMED%0AEND:VEVENT%0AEND:VCALENDAR`;
 
 export default function LiveScheduleCard({
   title = "Un camino de aprendizaje en tres encuentros",

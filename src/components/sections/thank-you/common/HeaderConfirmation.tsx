@@ -59,7 +59,7 @@ export default function HeaderConfirmation({
         </div>
       )}
 
-      {/* Frase / Callout Destacado (Tu experiencia comienza acá) */}
+      {/* Frase / Callout Destacado (Tu experiencia comienza aquí) */}
       {calloutText && (
         <div className="my-5 inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold-500/15 border border-gold-400/40 text-gold-950 font-display italic text-base sm:text-lg shadow-2xs">
           <Sparkles className="w-4 h-4 text-gold-700 shrink-0" aria-hidden="true" />

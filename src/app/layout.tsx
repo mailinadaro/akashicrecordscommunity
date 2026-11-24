@@ -68,12 +68,12 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${cormorantGaramond.variable} ${montserrat.variable}`} data-scroll-behavior="smooth">
       {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
-      <body className="antialiased">
+      <body className="antialiased overflow-x-clip">
         <SmoothScrollProvider>
-          <div className="relative w-full">
+          <div className="relative w-full max-w-full overflow-x-clip">
             <main
               id="site-content"
-              className="flex flex-col items-center justify-center w-full min-h-screen"
+              className="flex flex-col items-center justify-center w-full max-w-full min-h-screen overflow-x-clip"
             >
               <GSAPRouteWatcher />
               {children}

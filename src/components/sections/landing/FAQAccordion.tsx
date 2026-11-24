@@ -75,7 +75,7 @@ const DEFAULT_FAQS: FAQItem[] = [
     question:
       "¿Cuáles son las fechas y horarios de los encuentros en vivo? ¿Qué pasa si no puedo asistir a alguno?",
     answer:
-      "Los encuentros se realizarán por Zoom los sábados 16, 23 y 30 de enero de 2027, de 10:00 a 13:30 h (hora de México). Si no puedes participar en directo de alguna sesión, no te preocupes: todas las clases quedan grabadas y se suben a la plataforma dentro de las 24 horas siguientes para que las veas a tu propio ritmo.",
+      "Los encuentros se realizarán por Zoom los sábados 16, 23 y 30 de enero de 2027, de 10:00 a 13:30 h (horario de México). Cada encuentro dura 3 horas y 30 minutos, completando un total de 10 horas y 30 minutos de formación en vivo. Si no puedes participar en directo en alguna sesión, no te preocupes: todas las clases quedan grabadas y se suben a la plataforma dentro de las 24 horas siguientes para que las veas a tu propio ritmo.",
   },
   {
     id: "faq-8",
@@ -96,14 +96,14 @@ const DEFAULT_FAQS: FAQItem[] = [
     category: "Formato, horarios y materiales",
     question: "¿Cómo accedo a Circle y qué voy a encontrar allí?",
     answer:
-      "Una vez confirmada tu inscripción, recibirás un correo con las instrucciones para ingresar a nuestro espacio privado en Circle. Allí tendrás centralizados los enlaces a las clases en vivo, las grabaciones, los materiales descargables y los foros de intercambio grupal.",
+      "El acceso a la plataforma Circle y a los materiales se habilita a partir del 11 de enero de 2027 (no existe acceso inmediato tras la compra). En esa fecha recibirás un correo con tus credenciales e instrucciones para ingresar a nuestro espacio privado, donde encontrarás centralizados los enlaces a las sesiones por Zoom, las grabaciones, los materiales descargables y los foros de intercambio grupal.",
   },
   {
     id: "faq-11",
     category: "Formato, horarios y materiales",
     question: "¿Durante cuánto tiempo tengo acceso a los contenidos y grabaciones?",
     answer:
-      "Tendrás acceso completo a las grabaciones y materiales dentro de Circle durante 3 meses posteriores a la finalización de la iniciación, para que puedas repasar los ejercicios y asentar el método a tus tiempos. (Nota: si formas parte de la membresía anual, mantienes el acceso a estos materiales durante todo tu período de suscripción activo).",
+      "Para quienes compran únicamente la Iniciación Akáshica, el acceso a las grabaciones y materiales dentro de Circle tiene una duración de tres meses, contados a partir de la habilitación del acceso el 11 de enero de 2027 (no desde el momento de la compra). Por su parte, para quienes adquieren la membresía anual (Pase Anual), el acceso a las grabaciones de la iniciación queda disponible de por vida de acuerdo con las condiciones de esa modalidad, además del acceso continuo a la comunidad durante los 12 meses de suscripción activa.",
   },
   {
     id: "faq-12",
@@ -183,11 +183,11 @@ export default function FAQAccordion({
         id={id}
         aria-labelledby={`${id}-heading`}
         className={cn(
-          "w-full bg-surface-page py-24 lg:py-32 border-t border-border-default",
+          "w-full bg-surface-page py-24 lg:py-32 border-t border-border-default overflow-hidden",
           className
         )}
       >
-      <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-10 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Columna Izquierda: Encabezado + Tarjeta de Soporte */}
           <div className="lg:col-span-5 flex flex-col justify-start lg:sticky lg:top-28 lg:self-start">
@@ -297,12 +297,12 @@ export default function FAQAccordion({
               {groups.map((group, gIndex) => (
                 <div key={group.category || `group-${gIndex}`} className="flex flex-col gap-2.5">
                   {group.category && (
-                    <div data-faq-group className="flex items-center gap-3 pt-2 pb-0.5">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-400/25 text-gold-700 text-[11px] font-sans font-semibold tracking-wider uppercase shrink-0">
+                    <div data-faq-group className="flex items-center gap-3 pt-2 pb-0.5 max-w-full">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-400/25 text-gold-700 text-[10px] sm:text-[11px] font-sans font-semibold tracking-wider uppercase max-w-full [text-wrap:balance]">
                         <span className="w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0" />
-                        {group.category}
+                        <span className="leading-snug">{group.category}</span>
                       </span>
-                      <div className="h-px bg-border-default/50 flex-1" />
+                      <div className="hidden sm:block h-px bg-border-default/50 flex-1" />
                     </div>
                   )}
 

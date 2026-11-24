@@ -20,9 +20,9 @@ export interface HeroFullWindowProps {
 export default function HeroFullWindow({
   titleLine1 = "Iniciación Akáshica",
   titleLine2 = "El Camino de Regreso a tu Alma",
-  subtitlePrimary = "Aprendé a abrir y leer tus propios Registros Akáshicos en una experiencia guiada de 3 semanas.",
+  subtitlePrimary = "Aprende a abrir y leer tus propios Registros Akáshicos en una experiencia guiada de 3 semanas.",
   subtitleSecondary = "Un recorrido de aprendizaje, conexión y práctica para descubrir cómo acceder a tus Registros, conectar con tus Maestros y Guías espirituales y animarte a realizar tus primeras lecturas personales.",
-  datesBadge = "16, 23 y 30 de enero de 2027 · De 10 a 13 hs (Mx)",
+  datesBadge = "16, 23 y 30 de enero de 2027 · 10:00 a 13:30 h (horario de México)",
   ctaLabel = "QUIERO INICIAR MI CAMINO",
   ctaHref = siteConfig.hotmartUrl,
   backgroundImage,
@@ -51,26 +51,26 @@ export default function HeroFullWindow({
           className="object-cover object-center"
         />
       ) : (
-        <div className="absolute inset-0 bg-radial-[at_50%_40%] from-plum-900/60 via-black to-black" />
+        <div className="absolute inset-0 bg-radial-[at_50%_40%] from-plum-900/60 via-plum-900 to-plum-900" />
       )}
 
-      {/* Capa 1: Scrim neutral que atenúa el destello sin teñir de morado ni apagar los dorados del video */}
-      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+      {/* Capa 1: Scrim plum que atenúa el destello sin apagar los dorados del video */}
+      <div className="absolute inset-0 bg-plum-950/40 pointer-events-none" />
 
       {/* Capa 2: Gradiente vertical cinematográfico para fundir la base y elevar contraste del texto */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/55 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-plum-950/55 pointer-events-none" />
 
       {/* Capa 3: Viñeta perimetral suave para focalizar el ojo en el centro */}
-      <div className="absolute inset-0 bg-radial-[at_50%_50%] from-transparent via-black/15 to-black/65 pointer-events-none" />
+      <div className="absolute inset-0 bg-radial-[at_50%_50%] from-transparent via-plum-950/15 to-plum-950/65 pointer-events-none" />
     </>
   );
 
   const ContentNode = (
-    <div className="flex flex-col items-center justify-center text-center px-4 sm:px-6 max-w-4xl mx-auto py-8">
+    <div className="flex flex-col items-center justify-center text-center px-3 sm:px-6 max-w-4xl mx-auto py-8">
       {/* 1. Badge de Fechas y Formato */}
       {datesBadge && (
         <div className="hero-content-item mb-4 sm:mb-5">
-          <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-black/40 border border-gold-400/40 text-gold-300 font-sans text-[10px] sm:text-xs uppercase tracking-[0.14em] sm:tracking-[0.2em] font-semibold backdrop-blur-md shadow-md">
+          <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-plum-950/40 border border-gold-400/40 text-gold-300 font-sans text-[10px] sm:text-xs uppercase tracking-[0.14em] sm:tracking-[0.2em] font-semibold backdrop-blur-md shadow-md">
             <span className="text-center">{datesBadge}</span>
           </span>
         </div>
@@ -81,7 +81,7 @@ export default function HeroFullWindow({
         <span className="font-sans text-xs sm:text-sm md:text-base uppercase tracking-[0.25em] sm:tracking-[0.3em] text-gold-300 font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
           {titleLine1}
         </span>
-        <span className="whitespace-nowrap font-display italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.08] tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
+        <span className="whitespace-normal sm:whitespace-nowrap text-center max-w-full [text-wrap:balance] font-display italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.08] tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
           {titleLine2}
         </span>
       </h1>

@@ -27,7 +27,7 @@ const CHAPTERS: ChapterItem[] = [
     numeral: "I",
     title: "Capítulo I — Recordar y conectar",
     subtitle: "Abre el espacio para conectar con tus Registros",
-    date: "Sábado 16 de enero | 10:00 a 13:00 h (México)",
+    date: "Sábado 16 de enero de 2027 · 10:00 a 13:30 h (horario de México)",
     description:
       "En este primer encuentro vas a conocer qué son los Registros Akáshicos, comprender sus fundamentos y preparar el espacio interno y externo para comenzar esta experiencia.",
     topics: [
@@ -50,7 +50,7 @@ const CHAPTERS: ChapterItem[] = [
     numeral: "II",
     title: "Capítulo II — Escuchar y calibrar",
     subtitle: "Aprende a reconocer cómo recibes la información",
-    date: "Sábado 23 de enero | 10:00 a 13:00 h (México)",
+    date: "Sábado 23 de enero de 2027 · 10:00 a 13:30 h (horario de México)",
     description:
       "En este capítulo vas a profundizar en el proceso de apertura y explorar tus propias formas de percepción. También trabajarás con las dudas, los miedos y las resistencias que pueden aparecer al comenzar a canalizar.",
     topics: [
@@ -74,7 +74,7 @@ const CHAPTERS: ChapterItem[] = [
     numeral: "III",
     title: "Capítulo III — Integrar y sostener",
     subtitle: "Lleva lo aprendido a tu propia experiencia",
-    date: "Sábado 30 de enero | 10:00 a 13:00 h (México)",
+    date: "Sábado 30 de enero de 2027 · 10:00 a 13:30 h (horario de México)",
     description:
       "En el último encuentro vas a profundizar en la práctica de lectura, aprender a formular preguntas y explorar cómo relacionar la información recibida con situaciones concretas de tu vida.",
     topics: [
@@ -119,7 +119,7 @@ export default function ItinerariesListing({
     <section
       id={id}
       aria-label="Capítulos de la Iniciación: Tu camino paso a paso"
-      className={`relative w-full bg-[#FAF8F5] pt-20 lg:pt-28 pb-20 lg:pb-28 ${className}`}
+      className={`relative w-full bg-[#FAF8F5] pt-20 lg:pt-28 pb-20 lg:pb-28 overflow-hidden ${className}`}
     >
       {/* Halo ambiental áureo sutil */}
       <div
@@ -272,8 +272,8 @@ export default function ItinerariesListing({
         </ItinerariesKinematicWrapper>
 
         {/* CIERRE Y TRANSICIÓN EDITORIAL DE LA SECCIÓN */}
-        <div className="relative z-10 mt-20 lg:mt-28 max-w-4xl mx-auto px-6 text-center">
-          <div className="p-8 sm:p-12 bg-white border border-gold-400/30 rounded-none shadow-xl">
+        <div className="relative z-10 mt-20 lg:mt-28 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <div className="p-6 sm:p-12 bg-white border border-gold-400/30 rounded-none shadow-xl">
             <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-gold-700 font-bold block mb-3">
               ✦ TRES ENCUENTROS EN VIVO ✦
             </span>
@@ -286,11 +286,11 @@ export default function ItinerariesListing({
               {outroText}
             </p>
 
-            <Link href="#inscripcion" className="inline-block">
+            <Link href="#inscripcion" className="inline-block w-full sm:w-auto">
               <Button
                 variant="glass"
                 size="default"
-                className="group/cta px-9 py-4 h-auto text-xs font-bold tracking-widest uppercase bg-gold-500 hover:bg-gold-400 text-plum-950 border border-gold-400/60 transition-all duration-300 shadow-2xl gap-2.5 cursor-pointer rounded-none"
+                className="group/cta w-full sm:w-auto px-5 sm:px-9 py-4 h-auto text-xs font-bold tracking-widest uppercase bg-gold-500 hover:bg-gold-400 text-plum-950 border border-gold-400/60 transition-all duration-300 shadow-2xl gap-2.5 cursor-pointer rounded-none justify-center"
               >
                 <span>Inscribirme a la iniciación</span>
                 <ArrowRight

@@ -39,11 +39,11 @@ export default function InvestmentSection({
               id={`${id}-heading`}
               className="font-display italic text-3xl sm:text-4xl lg:text-5xl text-plum-950 font-normal leading-[1.15] mb-3"
             >
-              Tu camino comienza acá
+              Tu camino comienza aquí
             </h2>
 
             <p className="font-sans text-xs sm:text-sm uppercase tracking-wider text-gold-700/90 font-medium mb-4">
-              16, 23 y 30 de enero de 2027 · 10:00 a 13:30 h (México)
+              16, 23 y 30 de enero de 2027 · 10:00 a 13:30 h (horario de México)
             </p>
 
             <p className="font-body text-sm sm:text-base text-plum-600 font-light leading-relaxed max-w-2xl mx-auto">
@@ -121,7 +121,7 @@ export default function InvestmentSection({
                           <Check className="w-2.5 h-2.5 stroke-[2.5]" aria-hidden="true" />
                         </div>
                         <span className="text-xs font-body text-plum-700 font-light leading-relaxed">
-                          3 Encuentros en vivo por Zoom con Tamara Ciriza (10.5 horas de facilitación directa y calibración).
+                          3 encuentros en vivo por Zoom con Tamara Ciriza (10 horas y 30 minutos de formación en vivo; cada encuentro dura 3 horas y 30 minutos).
                         </span>
                       </li>
                       <li className="flex items-start gap-2.5">
@@ -129,7 +129,7 @@ export default function InvestmentSection({
                           <Check className="w-2.5 h-2.5 stroke-[2.5]" aria-hidden="true" />
                         </div>
                         <span className="text-xs font-body text-plum-700 font-light leading-relaxed">
-                          Grabaciones completas de todos los encuentros disponibles durante <strong className="font-medium text-plum-900">3 meses</strong> en Circle.
+                          Grabaciones completas de todos los encuentros disponibles en Circle durante <strong className="font-medium text-plum-900">3 meses</strong> contados a partir de la habilitación del acceso (11 de enero de 2027).
                         </span>
                       </li>
                     </ul>
@@ -201,7 +201,7 @@ export default function InvestmentSection({
                           <Check className="w-2.5 h-2.5 stroke-[2.5]" aria-hidden="true" />
                         </div>
                         <span className="text-xs font-body text-plum-700 font-light leading-relaxed">
-                          Acceso al espacio comunitario privado en Circle durante todo el proceso.
+                          Acceso a los materiales y al espacio comunitario en Circle a partir del 11 de enero de 2027 (durante 3 meses).
                         </span>
                       </li>
                     </ul>
@@ -235,7 +235,7 @@ export default function InvestmentSection({
                 <div className="flex flex-col items-center gap-1.5 pt-1">
                   <span className="text-[10px] font-sans uppercase tracking-wider text-plum-500 font-medium flex items-center gap-1">
                     <Lock className="w-3 h-3 text-gold-600" aria-hidden="true" />
-                    Pago seguro a través de Hotmart · Acceso inmediato al confirmar
+                    Pago seguro a través de Hotmart · Acceso a materiales a partir del 11 de enero de 2027
                   </span>
                   <PaymentMethodBadges variant="compact" align="center" />
                   <span className="text-[11px] font-body text-plum-500/80 font-light mt-0.5">
@@ -341,7 +341,7 @@ export default function InvestmentSection({
                           <Check className="w-2.5 h-2.5 stroke-[2.5]" aria-hidden="true" />
                         </div>
                         <span className="text-xs font-body text-plum-900 leading-relaxed">
-                          <strong className="font-semibold text-gold-800">Grabaciones disponibles sin fecha de vencimiento</strong> (acceso ilimitado de por vida vs. 3 meses).
+                          <strong className="font-semibold text-gold-800">Grabaciones disponibles sin fecha de vencimiento</strong> (acceso de por vida exclusivo de la membresía anual vs. 3 meses en la compra individual).
                         </span>
                       </li>
                     </ul>

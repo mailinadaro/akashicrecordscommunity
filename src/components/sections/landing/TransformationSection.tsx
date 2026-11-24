@@ -88,7 +88,7 @@ export default function TransformationSection({
 
         {/* 2. MARCAS DE AGUA EDITORIALES */}
         <div
-          className="absolute top-1/4 -right-24 w-96 h-96 z-0 pointer-events-none opacity-10 blur-[0.5px]"
+          className="absolute top-1/4 -right-12 sm:-right-24 w-64 h-64 sm:w-96 sm:h-96 z-0 pointer-events-none opacity-10 blur-[0.5px] max-w-full overflow-hidden"
           aria-hidden="true"
         >
           <Image

@@ -26,7 +26,7 @@ const DEFAULT_STEPS: ActionStep[] = [
   {
     number: "01",
     title: "Revisa tu bandeja de entrada",
-    description: "En los próximos 5 minutos recibirás tu confirmación de compra y enlace de activación (recuerda chequear spam o promociones).",
+    description: "En los próximos 5 minutos recibirás tu confirmación de compra y enlace de activación (recuerda revisar spam o promociones).",
     icon: <Mail className="w-5 h-5 text-gold-700" />,
   },
   {
@@ -155,7 +155,7 @@ export default function ActionSteps({
                       <ArrowRight className="w-4 h-4 text-gold-400" aria-hidden="true" />
                     </a>
                     <span className="text-[11px] font-body text-plum-500 mt-2">
-                      ✦ Activación inmediata de tu espacio privado de estudio
+                      ✦ Activación de tu espacio privado de estudio en Circle a partir del 11 de enero de 2027
                     </span>
                   </div>
                 ) : (

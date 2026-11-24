@@ -26,7 +26,7 @@ export default function LiveProductThankYou({
       description: "Te acabamos de enviar dos correos importantes:",
       bullets: [
         "El comprobante de pago de Hotmart con tu número de transacción.",
-        "Un correo de bienvenida de Tamara Ciriza con tus credenciales de acceso directo a Circle.",
+        "Un correo de bienvenida de Tamara Ciriza con los detalles de tu registro. Ten en cuenta que el acceso a Circle y a los materiales se habilitará a partir del 11 de enero de 2027.",
         "(Si no lo ves en tu bandeja principal en los próximos 5 minutos, revisa tu carpeta de Spam, Promociones o Correo no deseado).",
       ],
       icon: <Mail className="w-5 h-5 text-gold-700" />,
@@ -35,7 +35,7 @@ export default function LiveProductThankYou({
       number: "02",
       title: "PASO 2: Ingresa a nuestro espacio exclusivo en Circle",
       description:
-        "Todo el material, enlaces de Zoom y la biblioteca de audios vivirán centralizados en nuestra plataforma privada. Haz clic en el botón debajo para activar tu cuenta y presentarte en la comunidad:",
+        "Todo el material, enlaces de Zoom y la biblioteca de audios vivirán centralizados en nuestra plataforma privada en Circle, cuyo acceso se habilitará a partir del 11 de enero de 2027:",
       actionText: "ENTRAR A CIRCLE Y ACTIVAR MI ACCESO",
       actionHref: "https://circle.so", // URL de la comunidad en Circle
       actionVariant: "primary",
@@ -43,13 +43,13 @@ export default function LiveProductThankYou({
     },
     {
       number: "03",
-      title: "PASO 3: Agendá tus tres jornadas de encuentro",
+      title: "PASO 3: Agenda tus tres jornadas de encuentro",
       description:
-        "Reserva desde hoy las fechas y horarios de los 3 encuentros por Zoom (10:00 a 13:00 h, hora de México). Justo debajo tienes el cronograma detallado con el temario completo de cada jornada y los accesos para añadir cada clase a tu Google Calendar o Apple Calendar con un solo clic.",
+        "Reserva desde hoy las fechas y horarios de los 3 encuentros por Zoom (10:00 a 13:30 h, horario de México). Cada encuentro dura 3 horas y 30 minutos, completando 10 horas y 30 minutos de formación en vivo. Justo debajo tienes el cronograma detallado con el temario completo de cada jornada y los accesos para añadir cada clase a tu Google Calendar o Apple Calendar con un solo clic.",
       bullets: [
-        "Sábado 16 de enero: Jornada 1 — Recordar y Conectar (10:00 a 13:00 h)",
-        "Sábado 23 de enero: Jornada 2 — Escuchar y Calibrar (10:00 a 13:00 h)",
-        "Sábado 30 de enero: Jornada 3 — Integrar y Sostener (10:00 a 13:00 h)",
+        "Sábado 16 de enero: Jornada 1 — Recordar y Conectar (10:00 a 13:30 h, horario de México)",
+        "Sábado 23 de enero: Jornada 2 — Escuchar y Calibrar (10:00 a 13:30 h, horario de México)",
+        "Sábado 30 de enero: Jornada 3 — Integrar y Sostener (10:00 a 13:30 h, horario de México)",
         "(Si por alguna razón no puedes estar en vivo, todas las clases quedan grabadas y disponibles en Circle dentro de las 24 horas siguientes).",
       ],
       icon: <Calendar className="w-5 h-5 text-gold-700" />,
@@ -71,7 +71,7 @@ export default function LiveProductThankYou({
               "Elegiste abrir un nuevo espacio de exploración y conexión con tu mundo interior.",
               "Durante las próximas tres semanas vamos a recorrer juntas un camino de aprendizaje y práctica para que puedas conocer los Registros Akáshicos, aprender a acceder a ellos y realizar tus primeras lecturas personales.",
             ]}
-            calloutText="Tu experiencia comienza acá."
+            calloutText="Tu experiencia comienza aquí."
             conclusionText="Para prepararte, te invitamos a seguir estos tres pasos:"
             userEmail={userEmail}
             orderNumber={orderNumber}

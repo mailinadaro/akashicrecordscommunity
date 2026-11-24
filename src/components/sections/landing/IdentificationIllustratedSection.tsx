@@ -123,7 +123,7 @@ export default function IdentificationIllustratedSection({
 
         {/* 2. MARCAS DE AGUA EDITORIALES FLOTANTES */}
         <div
-          className="absolute top-12 -left-16 w-80 h-80 z-0 pointer-events-none opacity-10 blur-[0.5px]"
+          className="absolute top-12 -left-8 sm:-left-16 w-60 h-60 sm:w-80 sm:h-80 z-0 pointer-events-none opacity-10 blur-[0.5px] overflow-hidden"
           aria-hidden="true"
         >
           <Image

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function IniciacionPage() {
   return (
     <div className="w-full flex flex-col items-center justify-start">
-      {/* 1. Hero Full Window */}
+      {/* 1. Hero Definitivo (Video Full Window) */}
       <HeroFullWindow />
 
       {/* 2. Sección de Identificación Ilustrada: ¿Es para ti? */}
@@ -41,20 +41,18 @@ export default function IniciacionPage() {
       {/* 7. Tamara — Founder Story */}
       <FounderStory />
 
-      {/* 5. Video Testimonials */}
+      {/* 8. Video Testimonials */}
       <VideoTestimonials />
 
-      {/* 6. Investment Section */}
+      {/* 9. Investment Section */}
       <InvestmentSection />
 
-      {/* 7. FAQ Accordion */}
+      {/* 10. FAQ Accordion */}
       <FAQAccordion />
 
-      {/* 8. Final CTA */}
+      {/* 11. Final CTA */}
       <FinalCTA />
 
-      {/* 9. Otras Experiencias */}
-      <OtherTripsSection />
     </div>
   );
 }

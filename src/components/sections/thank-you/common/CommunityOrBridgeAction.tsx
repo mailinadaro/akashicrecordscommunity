@@ -77,7 +77,7 @@ export default function CommunityOrBridgeAction({
               <ArrowRight className="w-4 h-4 stroke-[2.5]" aria-hidden="true" />
             </a>
             <span className="text-[10px] font-body text-plum-500 mt-2 text-center">
-              Acceso inmediato con el correo de tu compra
+              Acceso con el correo de tu compra
             </span>
           </div>
         </div>
