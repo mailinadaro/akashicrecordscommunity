@@ -9,7 +9,7 @@ export default function EntreDosCiclosPage() {
     "/entre%20ciclos/Screenshot_2026-11-20_175636.png_b58ab2ce_2K.jpg";
 
   return (
-    <div className="relative flex flex-col justify-between items-center w-full min-h-full px-4 py-4 sm:py-6 lg:py-3 lg:px-8">
+    <div className="relative flex flex-col justify-between items-center w-full min-h-full px-4 py-3 sm:py-4 lg:py-2 lg:px-8">
       {/* 1. Fondo Multimedia: Video Cinemático con Velo Lúcido y Tenue */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video
@@ -40,19 +40,19 @@ export default function EntreDosCiclosPage() {
       </div>
 
       {/* Espaciador superior flexible */}
-      <div className="w-full shrink-0 h-1 sm:h-2" />
+      <div className="w-full shrink-0 h-1 hidden sm:block lg:hidden" />
 
       {/* 2. Tarjeta Central Desahogada (Web / Mobile) */}
       <EntreDosCiclosOptinCard />
 
       {/* 3. Logo de Akashic Records Community Centrado Abajo por Fuera del Recuadro con Gran Presencia */}
-      <div className="relative z-10 w-full flex justify-center items-center py-3 sm:py-5 shrink-0">
+      <div className="relative z-10 w-full flex justify-center items-center py-2.5 sm:py-3 lg:py-2 shrink-0">
         <Image
-          src="/logos/logo1.png"
+          src="/logos/logo1-trimmed.png"
           alt="Akashic Records Community"
-          width={300}
-          height={75}
-          className="h-12 sm:h-16 md:h-20 w-auto object-contain brightness-125 drop-shadow-[0_4px_20px_rgba(206,139,52,0.35)] transition-transform hover:scale-105"
+          width={361}
+          height={57}
+          className="h-11 sm:h-12 md:h-14 w-auto object-contain brightness-125 drop-shadow-[0_4px_24px_rgba(206,139,52,0.5)] transition-transform hover:scale-105"
           priority
         />
       </div>

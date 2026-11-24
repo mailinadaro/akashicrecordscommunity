@@ -233,17 +233,17 @@ export default function BrevoOptinForm() {
             <input type="hidden" name="locale" value="es" />
 
             {/* Botón de Envío (CTA de Alto Impacto) */}
-            <div className="sib-form-block pt-2">
+            <div className="sib-form-block pt-1.5">
               <button
                 type="submit"
                 form="sib-form"
                 disabled={isSubmitting}
-                className="sib-form-block__button sib-form-block__button-with-loader w-full h-12 sm:h-14 group relative overflow-hidden rounded-xl bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 px-6 font-body text-sm sm:text-base font-bold uppercase tracking-wider text-plum-950 shadow-lg shadow-gold-500/25 transition-all duration-300 hover:brightness-110 hover:shadow-gold-500/40 active:scale-[0.98] disabled:opacity-60 cursor-pointer"
+                className="sib-form-block__button sib-form-block__button-with-loader w-full h-11 sm:h-12 group relative overflow-hidden rounded-xl bg-gradient-to-r from-gold-500 via-gold-300 to-gold-500 px-4 sm:px-6 font-body text-xs sm:text-sm font-bold uppercase tracking-wider text-plum-950 shadow-lg shadow-gold-500/30 transition-all duration-300 hover:brightness-110 hover:shadow-gold-500/45 active:scale-[0.98] disabled:opacity-60 cursor-pointer whitespace-nowrap"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   <span>RESERVAR MI LUGAR GRATIS</span>
                   <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 group-hover:translate-x-1"
+                    className="w-4 h-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -261,7 +261,7 @@ export default function BrevoOptinForm() {
             </div>
 
             {/* Micro-texto de Fricción Cero en Alto Contraste */}
-            <p className="text-center font-body text-xs sm:text-sm text-gold-200/90 leading-relaxed pt-1">
+            <p className="text-center font-body text-xs sm:text-sm text-gold-200/90 leading-relaxed pt-0.5">
               100% gratuito. Te enviaremos el enlace de Zoom directo a tu correo.
             </p>
           </form>
@@ -274,11 +274,94 @@ export default function BrevoOptinForm() {
         strategy="afterInteractive"
       />
 
-      {/* Reglas de estilo para el dropdown de países generado por Brevo */}
+      {/* Reglas de estilo para el widget y dropdown de países generado por Brevo */}
       <style jsx global>{`
+        .sib-sms-select {
+          position: relative;
+          display: flex !important;
+          align-items: center !important;
+          gap: 0.5rem !important;
+          width: 100% !important;
+        }
+        .sib-sms-select__title {
+          display: inline-flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          gap: 0.45rem !important;
+          height: 2.75rem !important;
+          padding: 0 0.75rem !important;
+          background: rgba(51, 30, 69, 0.85) !important;
+          border: 1px solid rgba(175, 139, 91, 0.4) !important;
+          border-radius: 0.75rem !important;
+          color: #dfb084 !important;
+          font-size: 0.8125rem !important;
+          font-weight: 500 !important;
+          cursor: pointer !important;
+          white-space: nowrap !important;
+          shrink: 0 !important;
+          transition: border-color 0.2s ease !important;
+        }
+        .sib-sms-select__title:hover {
+          border-color: rgba(197, 152, 106, 0.75) !important;
+        }
+        .sib-sms-select__title::after {
+          content: "▾";
+          font-size: 0.7rem;
+          opacity: 0.85;
+          margin-left: 0.15rem;
+        }
+        .sib-sms-select__number-input {
+          position: relative !important;
+          flex: 1 1 0% !important;
+          min-width: 0 !important;
+          display: flex !important;
+          align-items: center !important;
+          gap: 0.25rem !important;
+          height: 2.75rem !important;
+          padding: 0 0.75rem !important;
+          background: rgba(51, 30, 69, 0.85) !important;
+          border: 1px solid rgba(175, 139, 91, 0.4) !important;
+          border-radius: 0.75rem !important;
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.18) !important;
+        }
+        .sib-sms-select__number-input:focus-within {
+          border-color: #c5986a !important;
+          box-shadow: 0 0 0 2px rgba(175, 139, 91, 0.45) !important;
+        }
+        .sib-sms-select__calling-code {
+          width: 3rem !important;
+          flex-shrink: 0 !important;
+          background: transparent !important;
+          border: none !important;
+          color: #dfb084 !important;
+          font-size: 0.8125rem !important;
+          font-weight: 600 !important;
+          outline: none !important;
+          padding: 0 !important;
+        }
+        .sib-sms-select__phone-number {
+          flex: 1 1 0% !important;
+          min-width: 0 !important;
+          width: 100% !important;
+          background: transparent !important;
+          border: none !important;
+          color: #ffffff !important;
+          font-size: 0.875rem !important;
+          outline: none !important;
+          padding: 0 !important;
+        }
+        .sib-sms-select__phone-number::placeholder {
+          color: rgba(223, 176, 132, 0.5) !important;
+        }
+        @media (min-width: 640px) {
+          .sib-sms-select__title,
+          .sib-sms-select__number-input {
+            height: 3rem !important;
+          }
+        }
         .sib-sms-select__list {
           background: #1c0824 !important;
-          border: 1px solid rgba(212, 175, 55, 0.4) !important;
+          border: 1px solid rgba(206, 139, 52, 0.45) !important;
           border-radius: 12px !important;
           box-sizing: border-box !important;
           display: none !important;
@@ -290,8 +373,8 @@ export default function BrevoOptinForm() {
           position: absolute !important;
           width: 260px !important;
           z-index: 99999 !important;
-          color: #f7e7ce !important;
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+          color: #dfb084 !important;
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65) !important;
         }
         .sib-sms-select__list.sib-is-open {
           display: block !important;
@@ -307,8 +390,8 @@ export default function BrevoOptinForm() {
           border-radius: 8px !important;
         }
         .sib-sms-select__list li:hover {
-          background: rgba(212, 175, 55, 0.2) !important;
-          color: #ffd700 !important;
+          background: rgba(206, 139, 52, 0.22) !important;
+          color: #ffffff !important;
         }
       `}</style>
     </div>
