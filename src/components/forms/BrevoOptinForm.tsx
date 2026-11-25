@@ -2,99 +2,97 @@
 
 import React, { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-
-const BREVO_ACTION_URL =
-  "https://58e376cb.sibforms.com/serve/MUIFAGTP5VmY3-tKtuD8Uk9fgnu2VakEbNrXG2YWeVg9AFawNsfeLRpVeLJT3LM3D5G1GRFPD6bgW5EG25ainOJHr50uTckdVtOM1oFh4Ut4StMq71DGp2zuHJxEfPjgnDn-vTW9n27pL9iJRRMx8JTmnLNDcW6taei1ANV6G_kVNlTE2rE2gDHUbIxjcuFUn5FgrZCE5eJwoF9MMA==";
-
-const COUNTRY_OPTIONS = [
-  { code: "+52", label: "+52 MX (México)" },
-  { code: "+54", label: "+54 AR (Argentina)" },
-  { code: "+57", label: "+57 CO (Colombia)" },
-  { code: "+56", label: "+56 CL (Chile)" },
-  { code: "+51", label: "+51 PE (Perú)" },
-  { code: "+34", label: "+34 ES (España)" },
-  { code: "+1", label: "+1 US / CA" },
-  { code: "+598", label: "+598 UY (Uruguay)" },
-  { code: "+593", label: "+593 EC (Ecuador)" },
-  { code: "+506", label: "+506 CR (Costa Rica)" },
-  { code: "+502", label: "+502 GT (Guatemala)" },
-  { code: "+507", label: "+507 PA (Panamá)" },
-  { code: "+591", label: "+591 BO (Bolivia)" },
-  { code: "+595", label: "+595 PY (Paraguay)" },
-  { code: "+58", label: "+58 VE (Venezuela)" },
-];
-
-interface BrevoAjaxResponse {
-  success?: boolean;
-  message?: string;
-  errors?: Record<string, string>;
-}
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { registerContactInBrevo } from "@/app/actions/brevo";
+import {
+  brevoOptinSchema,
+  COUNTRY_OPTIONS,
+  DEFAULT_EVENTO,
+  DEFAULT_ORIGEN_REGISTRO,
+  type BrevoOptinField,
+  type BrevoOptinInput,
+  type BrevoOptinParsed,
+} from "@/lib/schemas/brevo-optin";
 
 export interface BrevoOptinFormProps {
   redirectTo?: string;
+  origenRegistro?: string;
+  evento?: string;
 }
 
 export default function BrevoOptinForm({
   redirectTo = "/thank-you/entre-dos-ciclos",
+  origenRegistro = DEFAULT_ORIGEN_REGISTRO,
+  evento = DEFAULT_EVENTO,
 }: BrevoOptinFormProps = {}) {
   const router = useRouter();
-  const formRef = useRef<HTMLFormElement>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const hasSucceededRef = useRef(false);
+  const [serverError, setServerError] = useState<string | null>(null);
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (isSubmitting) return;
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: { errors, isSubmitting },
+  } = useForm<BrevoOptinInput, unknown, BrevoOptinParsed>({
+    resolver: zodResolver(brevoOptinSchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      countryCode: "+52",
+      whatsapp: "",
+      origenRegistro,
+      evento,
+      honeypot: "",
+    },
+  });
 
-    const form = formRef.current;
-    if (!form) return;
+  const validationError =
+    errors.fullName?.message ||
+    errors.email?.message ||
+    errors.countryCode?.message ||
+    errors.whatsapp?.message ||
+    null;
 
-    const formData = new FormData(form);
-    const fullName = String(formData.get("NOMBRE_COMPLETO") ?? "").trim();
-    const email = String(formData.get("EMAIL") ?? "").trim();
-    const whatsapp = String(formData.get("WHATSAPP") ?? "").trim();
+  const errorMessage = serverError || validationError;
 
-    if (!fullName || !email || !whatsapp) {
-      setErrorMessage("Por favor completa tu nombre, email y número de WhatsApp.");
-      return;
-    }
+  const onSubmit = async (data: BrevoOptinParsed) => {
+    if (hasSucceededRef.current) return;
 
-    setErrorMessage(null);
-    setIsSubmitting(true);
+    setServerError(null);
 
     try {
-      const response = await fetch(`${BREVO_ACTION_URL}?isAjax=1`, {
-        method: "POST",
-        body: formData,
+      const result = await registerContactInBrevo({
+        ...data,
+        origenRegistro,
+        evento,
       });
 
-      const contentType = response.headers.get("content-type") ?? "";
-      const data = contentType.includes("application/json")
-        ? ((await response.json()) as BrevoAjaxResponse)
-        : null;
-
-      if (!response.ok || data?.success === false) {
-        const firstFieldError = data?.errors
-          ? Object.values(data.errors).find(Boolean)
-          : undefined;
-        setErrorMessage(
-          firstFieldError ||
-            data?.message ||
+      if (!result.success) {
+        if (result.fieldErrors) {
+          for (const [field, message] of Object.entries(result.fieldErrors)) {
+            if (message) {
+              setError(field as BrevoOptinField, { type: "server", message });
+            }
+          }
+        }
+        setServerError(
+          result.message ||
             "No se pudo guardar tu registro. Por favor revisa los datos e intenta de nuevo."
         );
-        setIsSubmitting(false);
         return;
       }
 
-      const targetUrl = email
-        ? `${redirectTo}?email=${encodeURIComponent(email)}`
+      hasSucceededRef.current = true;
+      const targetUrl = data.email
+        ? `${redirectTo}?email=${encodeURIComponent(data.email)}`
         : redirectTo;
       router.push(targetUrl);
     } catch {
-      setErrorMessage(
+      setServerError(
         "Ocurrió un error de conexión al enviar tu registro. Intenta nuevamente."
       );
-      setIsSubmitting(false);
     }
   };
 
@@ -126,16 +124,13 @@ export default function BrevoOptinForm({
           </div>
         )}
 
-        {/* Formulario conectado al endpoint oficial de Brevo */}
+        {/* Formulario conectado al Server Action seguro de Brevo */}
         <div id="sib-container">
           <form
             id="sib-form"
-            ref={formRef}
-            method="POST"
-            action={BREVO_ACTION_URL}
-            data-type="subscription"
+            noValidate
             className="flex flex-col gap-3 sm:gap-4"
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
           >
             {/* Campo 1: Nombre Completo */}
             <div className="sib-input sib-form-block form__entry text-left">
@@ -149,14 +144,14 @@ export default function BrevoOptinForm({
               <div className="entry__field">
                 <input
                   id="NOMBRE_COMPLETO"
-                  name="NOMBRE_COMPLETO"
                   type="text"
                   maxLength={200}
                   autoComplete="name"
                   data-required="true"
-                  required
+                  aria-invalid={Boolean(errors.fullName)}
                   placeholder="Escribe tu nombre y apellido"
                   className="input w-full h-11 sm:h-12 bg-plum-950/80 border border-gold-400/45 text-white placeholder:text-gold-200/75 text-xs sm:text-sm rounded-xl px-3.5 py-2 sm:py-3 transition-all duration-200 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-400/50 shadow-inner"
+                  {...register("fullName")}
                 />
               </div>
             </div>
@@ -173,13 +168,13 @@ export default function BrevoOptinForm({
               <div className="entry__field">
                 <input
                   id="EMAIL"
-                  name="EMAIL"
                   type="email"
                   autoComplete="email"
                   data-required="true"
-                  required
+                  aria-invalid={Boolean(errors.email)}
                   placeholder="ejemplo@correo.com"
                   className="input w-full h-11 sm:h-12 bg-plum-950/80 border border-gold-400/45 text-white placeholder:text-gold-200/75 text-xs sm:text-sm rounded-xl px-3.5 py-2 sm:py-3 transition-all duration-200 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-400/50 shadow-inner"
+                  {...register("email")}
                 />
               </div>
             </div>
@@ -200,10 +195,9 @@ export default function BrevoOptinForm({
                 <div className="entry__field w-28 sm:w-36 shrink-0">
                   <select
                     aria-label="Código de país"
-                    name="WHATSAPP__COUNTRY_CODE"
                     data-required="true"
-                    defaultValue="+52"
                     className="input w-full h-11 sm:h-12 bg-plum-950/90 border border-gold-400/45 text-[#FCE8CA] lg:text-gold-100 font-medium text-xs sm:text-sm rounded-xl px-2.5 transition-all duration-200 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-400/50 cursor-pointer shadow-inner"
+                    {...register("countryCode")}
                   >
                     {COUNTRY_OPTIONS.map((c) => (
                       <option key={c.code} value={c.code} className="bg-plum-950 text-gold-100">
@@ -215,35 +209,33 @@ export default function BrevoOptinForm({
                 <div className="entry__field flex-1">
                   <input
                     id="WHATSAPP"
-                    name="WHATSAPP"
                     type="tel"
                     autoComplete="tel"
                     data-required="true"
-                    required
+                    aria-invalid={Boolean(errors.whatsapp)}
                     placeholder="10 dígitos de tu móvil"
-                    className="input w-full h-11 sm:h-12 bg-plum-950/80 border border-gold-400/45 text-white placeholder:text-gold-200/75 text-xs sm:text-sm rounded-xl px-3.5 transition-all duration-200 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-400/50 shadow-inner"
+                    className="input w-full h-11 sm:h-12 bg-plum-950/80 border border-gold-400/45 text-white placeholder:text-gold-200/75 text-xs sm:text-sm rounded-xl px-3.5 py-2 sm:py-3 transition-all duration-200 focus:outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-400/50 shadow-inner"
+                    {...register("whatsapp")}
                   />
                 </div>
               </div>
             </div>
 
-            {/* Inputs Ocultos de Brevo */}
+            {/* Honeypot Anti-Spam */}
             <input
               type="text"
-              name="email_address_check"
-              value=""
               className="input--hidden hidden"
               tabIndex={-1}
               autoComplete="off"
-              readOnly
+              aria-hidden="true"
+              {...register("honeypot")}
             />
-            <input type="hidden" name="locale" value="es" />
 
             {/* Botón de Envío */}
             <div className="sib-form-block pt-1.5">
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || hasSucceededRef.current}
                 className="w-full h-11 sm:h-12 group relative overflow-hidden rounded-xl bg-gradient-to-r from-gold-500 via-gold-300 to-gold-500 px-4 sm:px-6 font-body text-xs sm:text-sm font-bold uppercase tracking-wider text-plum-950 shadow-lg shadow-gold-500/30 transition-all duration-300 hover:brightness-110 hover:shadow-gold-500/45 active:scale-[0.98] disabled:opacity-60 cursor-pointer whitespace-nowrap"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">

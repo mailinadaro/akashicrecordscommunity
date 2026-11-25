@@ -50,7 +50,7 @@ const METADATA_BY_TYPE: Record<string, { title: string; description: string }> =
   "entre-dos-ciclos": {
     title: "¡Falta 1 paso para completar tu registro! — Entre Dos Ciclos",
     description:
-      "Tu registro a Entre Dos Ciclos está al 70%. Entra al Grupo VIP de WhatsApp para completarlo y recibir el acceso al encuentro del 12 de diciembre.",
+      "Tu registro a Entre Dos Ciclos está al 70%. Entra al grupo exclusivo de WhatsApp para completarlo y recibir el acceso al encuentro del 12 de diciembre.",
   },
 };
 

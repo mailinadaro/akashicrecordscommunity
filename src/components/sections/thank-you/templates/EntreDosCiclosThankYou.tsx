@@ -13,14 +13,14 @@ export interface EntreDosCiclosThankYouProps {
   className?: string;
 }
 
-const VIP_WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/FctmBPMbJHKKfptYTVcICM";
+const EXCLUSIVE_WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/FctmBPMbJHKKfptYTVcICM";
 
 const GOOGLE_CALENDAR_URL =
   "https://calendar.google.com/calendar/render?action=TEMPLATE" +
   "&text=Entre+Dos+Ciclos+%E2%80%94+Akashic+Records+Community" +
   "&dates=20261212T160000Z/20261212T180000Z" +
-  "&details=Encuentro+online+en+vivo+para+integrar+lo+vivido+en+el+2026+y+abrirte+con+claridad+al+2027.+El+enlace+de+Zoom+se+compartir%C3%A1+en+el+Grupo+VIP+de+WhatsApp+y+por+correo." +
-  "&location=Online+%28Zoom+%E2%80%94+enlace+en+el+Grupo+VIP+de+WhatsApp%29";
+  "&details=Encuentro+online+en+vivo+para+integrar+lo+vivido+en+el+2026+y+abrirte+con+claridad+al+2027.+El+enlace+de+Zoom+se+compartir%C3%A1+en+el+Grupo+Exclusivo+de+WhatsApp+y+por+correo." +
+  "&location=Online+%28Zoom+%E2%80%94+enlace+en+el+Grupo+Exclusivo+de+WhatsApp%29";
 
 const ICAL_DATA_URI =
   "data:text/calendar;charset=utf8," +
@@ -36,8 +36,8 @@ const ICAL_DATA_URI =
     "DTSTART:20261212T160000Z",
     "DTEND:20261212T180000Z",
     "SUMMARY:Entre Dos Ciclos — Akashic Records Community",
-    "DESCRIPTION:Encuentro online en vivo para integrar lo vivido en el 2026 y abrirte con claridad al 2027. El enlace de Zoom se compartirá en el Grupo VIP de WhatsApp y por correo.",
-    "LOCATION:Online (Zoom — enlace en el Grupo VIP de WhatsApp)",
+    "DESCRIPTION:Encuentro online en vivo para integrar lo vivido en el 2026 y abrirte con claridad al 2027. El enlace de Zoom se compartirá en el Grupo Exclusivo de WhatsApp y por correo.",
+    "LOCATION:Online (Zoom — enlace en el Grupo Exclusivo de WhatsApp)",
     "STATUS:CONFIRMED",
     "END:VEVENT",
     "END:VCALENDAR",
@@ -48,7 +48,7 @@ const OUTLOOK_CALENDAR_URL =
   "&startdt=2026-12-12T16:00:00Z" +
   "&enddt=2026-12-12T18:00:00Z" +
   "&subject=Entre%20Dos%20Ciclos%20%E2%80%94%20Akashic%20Records%20Community" +
-  "&body=Encuentro%20online%20en%20vivo%20para%20integrar%20lo%20vivido%20en%20el%202026%20y%20abrirte%20con%20claridad%20al%202027.%20El%20enlace%20de%20Zoom%20se%20compartir%C3%A1%20en%20el%20Grupo%20VIP%20de%20WhatsApp%20y%20por%20correo." +
+  "&body=Encuentro%20online%20en%20vivo%20para%20integrar%20lo%20vivido%20en%20el%202026%20y%20abrirte%20con%20claridad%20al%202027.%20El%20enlace%20de%20Zoom%20se%20compartir%C3%A1%20en%20el%20Grupo%20Exclusivo%20de%20WhatsApp%20y%20por%20correo." +
   "&location=Online%20(Zoom)";
 
 export default function EntreDosCiclosThankYou({
@@ -111,7 +111,7 @@ export default function EntreDosCiclosThankYou({
               title="¡Tu registro aún no está completado!"
               paragraphs={[
                 "Ya recibimos tus datos para Entre Dos Ciclos, pero todavía falta un último paso indispensable para confirmar tu lugar.",
-                "Para completar tu registro al 100% y asegurarte de recibir el enlace de Zoom, entra ahora al Grupo VIP de WhatsApp.",
+                "Para completar tu registro al 100% y asegurarte de recibir el enlace de Zoom, entra ahora al grupo exclusivo de WhatsApp.",
               ]}
               conclusionText="Completa este último paso ahora:"
               userEmail={userEmail}
@@ -121,7 +121,7 @@ export default function EntreDosCiclosThankYou({
                 <RegistrationProgressBar
                   percentage={70}
                   label="Tu registro está al 70%"
-                  helperText="Falta 1 paso: entrar al Grupo de WhatsApp para completarlo al 100%"
+                  helperText="Falta 1 paso: entrar al grupo exclusivo de WhatsApp para completarlo al 100%"
                 />
                 <EventDetailsStrip />
               </div>
@@ -129,16 +129,16 @@ export default function EntreDosCiclosThankYou({
 
             <div className="border-t border-gold-400/20" />
 
-            {/* Paso Final Indispensable: Grupo VIP de WhatsApp */}
+            {/* Paso Final Indispensable: Grupo Exclusivo de WhatsApp */}
             <WhatsAppVipGroupCallout
               theme="dark"
               layout="stacked"
-              badge="Último Paso- Completa tu registro"
-              title="Entra al Grupo de WhatsApp"
+              badge="Último Paso - Completa tu registro"
+              title="Entra al grupo exclusivo de WhatsApp"
               description="Es nuestro canal oficial de comunicación. Al entrar completas tu registro y allí compartiremos el enlace de Zoom, recordatorios y novedades importantes para el encuentro."
               trustText="Paso indispensable para completar tu registro y recibir el enlace de Zoom"
-              ctaText="ENTRAR AL GRUPO DE WHATSAPP"
-              whatsappGroupUrl={VIP_WHATSAPP_GROUP_URL}
+              ctaText="ENTRAR AL GRUPO EXCLUSIVO DE WHATSAPP"
+              whatsappGroupUrl={EXCLUSIVE_WHATSAPP_GROUP_URL}
               className="px-0 py-0"
             />
 
@@ -160,7 +160,7 @@ export default function EntreDosCiclosThankYou({
             {/* Cierre cálido y soporte mínimo sin distracciones */}
             <div className="pt-4 border-t border-gold-400/20 text-center space-y-1.5">
               <p className="font-display italic text-lg sm:text-xl text-[#F7E3C6] lg:text-gold-200 font-normal lg:font-light">
-                Una vez dentro del Grupo, tu lugar quedará 100% confirmado. ¡Nos vemos pronto!
+                Una vez dentro del grupo exclusivo de WhatsApp, tu lugar quedará 100% confirmado. ¡Nos vemos pronto!
               </p>
               <p className="font-body text-xs text-white/80">
                 ¿Dudas con tu registro? Escríbenos a{" "}

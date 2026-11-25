@@ -5,7 +5,7 @@ import EntreDosCiclosThankYou from "@/components/sections/thank-you/templates/En
 export const metadata: Metadata = {
   title: "¡Falta 1 paso para completar tu registro! — Entre Dos Ciclos",
   description:
-    "Tu registro a Entre Dos Ciclos está al 70%. Entra al Grupo VIP de WhatsApp para completarlo y recibir el acceso al encuentro del 12 de diciembre de 2026.",
+    "Tu registro a Entre Dos Ciclos está al 70%. Entra al grupo exclusivo de WhatsApp para completarlo y recibir el acceso al encuentro del 12 de diciembre de 2026.",
   robots: {
     index: false,
     follow: false,

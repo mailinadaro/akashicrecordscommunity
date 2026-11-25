@@ -16,10 +16,10 @@ export interface WhatsAppVipGroupCalloutProps {
 
 export default function WhatsAppVipGroupCallout({
   badge = "Canal Exclusivo de Avisos",
-  title = "Súmate al Grupo VIP de WhatsApp",
+  title = "Súmate al Grupo Exclusivo de WhatsApp",
   description = "No enviamos spam ni abrimos chat masivo. Es un canal privado administrado por el equipo donde compartiremos el enlace de acceso directo 15 minutos antes, audios exclusivos y el PDF complementario.",
   trustText = "Grupo silencioso · Solo administradores · Privacidad protegida",
-  ctaText = "UNIRME AL GRUPO VIP DE WHATSAPP",
+  ctaText = "UNIRME AL GRUPO EXCLUSIVO DE WHATSAPP",
   whatsappGroupUrl = siteConfig.contact.whatsapp,
   theme = "light",
   layout = "row",
@@ -77,13 +77,13 @@ export default function WhatsAppVipGroupCallout({
           </div>
         </div>
 
-        <div className={isStacked ? "w-full sm:w-auto pt-1" : "shrink-0 w-full md:w-auto"}>
+        <div className={isStacked ? "w-full sm:w-auto pt-1 min-w-0" : "shrink-0 w-full md:w-auto min-w-0"}>
           <a
             href={whatsappGroupUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-full inline-flex items-center justify-center gap-2.5 rounded-xl font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.14em] transition-all duration-300 active:scale-[0.98] cursor-pointer whitespace-nowrap ${
-              isStacked ? "sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4" : "md:w-auto px-6 sm:px-7 py-4"
+            className={`w-full max-w-full inline-flex items-center justify-center gap-2 sm:gap-2.5 rounded-xl font-sans text-[11px] sm:text-sm font-bold uppercase tracking-[0.06em] sm:tracking-[0.12em] leading-snug text-center transition-all duration-300 active:scale-[0.98] cursor-pointer whitespace-normal sm:whitespace-nowrap ${
+              isStacked ? "sm:w-auto px-4 py-3.5 sm:px-8 sm:py-4" : "md:w-auto px-4 py-3.5 sm:px-7 sm:py-4"
             } ${
               isDark
                 ? "bg-emerald-500 hover:bg-emerald-400 text-emerald-950 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-400/45"
@@ -94,7 +94,7 @@ export default function WhatsAppVipGroupCallout({
               className={`w-4 h-4 shrink-0 ${isDark ? "fill-emerald-950" : "fill-white"}`}
               aria-hidden="true"
             />
-            <span>{ctaText}</span>
+            <span className="min-w-0">{ctaText}</span>
             <ArrowRight className="w-4 h-4 shrink-0" aria-hidden="true" />
           </a>
         </div>
