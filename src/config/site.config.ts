@@ -99,8 +99,11 @@ export const siteConfig: SiteConfig = {
     titleTemplate: "%s | Iniciación Akáshica",
     defaultDescription:
       "Espacio de formación, lectura e iniciación en Registros Akáshicos.",
-    siteUrl: "https://www.akashicrecordscommunity.com",
-    ogImage: "",
+    siteUrl: (
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://akashicrecordscommunity.vercel.app"
+    ).replace(/\/$/, ""),
+    ogImage: "/og/entre-dos-ciclos.jpg",
     keywords: [
       "Iniciación Akáshica",
       "Registros Akáshicos",

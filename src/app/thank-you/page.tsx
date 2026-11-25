@@ -1,6 +1,7 @@
 import React from "react";
 import { redirect } from "next/navigation";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import LiveProductThankYou from "@/components/sections/thank-you/templates/IniciacionThankYou";
 import WebinarThankYou from "@/components/sections/thank-you/templates/WebinarThankYou";
 import LeadMagnetThankYou from "@/components/sections/thank-you/templates/LeadMagnetThankYou";
@@ -62,26 +63,15 @@ const DEFAULT_METADATA = {
 export async function generateMetadata({ searchParams }: ThankYouPageProps): Promise<Metadata> {
   const { type } = await searchParams;
   const config = (type && METADATA_BY_TYPE[type]) || DEFAULT_METADATA;
+  const path = type ? `/thank-you?type=${encodeURIComponent(type)}` : "/thank-you";
 
-  return {
+  return buildPageMetadata({
     title: config.title,
+    absoluteTitle: true,
     description: config.description,
-    robots: {
-      index: false,
-      follow: false,
-      nocache: true,
-      googleBot: {
-        index: false,
-        follow: false,
-        noimageindex: true,
-      },
-    },
-    openGraph: {
-      title: config.title,
-      description: config.description,
-      type: "website",
-    },
-  };
+    path,
+    noIndex: true,
+  });
 }
 
 export default async function ThankYouPage({ searchParams }: ThankYouPageProps) {

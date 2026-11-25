@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import HeroFullWindow from "@/components/sections/landing/HeroFullWindow";
 import IdentificationIllustratedSection from "@/components/sections/landing/IdentificationIllustratedSection";
 import TransformationSection from "@/components/sections/landing/TransformationSection";
@@ -12,10 +13,19 @@ import FAQAccordion from "@/components/sections/landing/FAQAccordion";
 import FinalCTA from "@/components/sections/landing/FinalCTA";
 import VideoTestimonials from "@/components/sections/landing/VideoTestimonials";
 
-export const metadata: Metadata = {
-  title: "Iniciación",
-  description: "Espacio de formación, lectura e iniciación en Registros Akáshicos.",
-};
+export const metadata: Metadata = buildPageMetadata({
+  title: "Iniciación Akáshica: El Camino de Regreso a tu Alma | Akashic Records Community",
+  absoluteTitle: true,
+  description:
+    "Formación guiada en vivo de tres semanas para aprender a abrir, leer y cerrar tus propios Registros Akáshicos con método, discernimiento y autonomía. Próxima edición: enero 2027.",
+  path: "/iniciacion",
+  image: {
+    url: "/og/iniciacion.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Iniciación Akáshica: El Camino de Regreso a tu Alma — Akashic Records Community",
+  },
+});
 
 export default function IniciacionPage() {
   return (

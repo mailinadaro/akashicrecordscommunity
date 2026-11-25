@@ -1,6 +1,22 @@
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import EntreDosCiclosOptinCard from "@/components/sections/optin/EntreDosCiclosOptinCard";
+import { buildPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Entre Dos Ciclos — Encuentro Online Gratuito | Akashic Records Community",
+  absoluteTitle: true,
+  description:
+    "Encuentro online gratuito el 12 de diciembre (10:00 a 12:00 hs México). Meditación guiada de integración del 2026, panorama astrológico 2027 y canalización en vivo con Tamara Ciriza.",
+  path: "/entre-dos-ciclos",
+  image: {
+    url: "/og/entre-dos-ciclos.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Entre Dos Ciclos: Integrar el 2026 y abrirnos con claridad al 2027 — Akashic Records Community",
+  },
+});
 
 export default function EntreDosCiclosPage() {
   const videoSrc =

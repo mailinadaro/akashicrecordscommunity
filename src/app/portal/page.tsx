@@ -1,20 +1,20 @@
 import React from "react";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getCachedPortalMetrics } from "@/lib/analytics/ga4";
 import ExecutiveSummarySection from "@/components/sections/portal/ExecutiveSummarySection";
 import ValueTranslatorSection from "@/components/sections/portal/ValueTranslatorSection";
 import IntentTabsSection from "@/components/sections/portal/IntentTabsSection";
 import ActionableNextStepsSection from "@/components/sections/portal/ActionableNextStepsSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Dashboard Directivo WEB | Iniciación Akáshica",
+  absoluteTitle: true,
   description:
     "Storytelling de métricas de negocio, salud comercial y toma de decisiones tácticas para el negocio.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
+  path: "/portal",
+  noIndex: true,
+});
 
 interface PortalPageProps {
   readonly searchParams: Promise<{ intent?: string }>;
